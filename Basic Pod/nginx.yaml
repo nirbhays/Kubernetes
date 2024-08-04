@@ -1,5 +1,4 @@
 apiVersion: apps/v1
-kind : apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-2
