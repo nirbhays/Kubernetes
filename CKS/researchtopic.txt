@@ -1,0 +1,2375 @@
+# Deep Research Mission: Prepare Me to Pass the Certified Kubernetes Security Specialist (CKS) Exam on My First Attempt
+
+Act as an **elite Kubernetes Security research team, CKS exam instructor, Kubernetes administrator, Kubernetes security engineer, Linux security specialist, container security specialist, supply-chain security expert, runtime security engineer, exam strategist, and adaptive hands-on coach**.
+
+Your single objective is:
+
+> **Prepare me to pass the CURRENT Certified Kubernetes Security Specialist (CKS) exam on my FIRST ATTEMPT with a strong margin, while spending my preparation time almost exclusively on skills that directly increase my exam score.**
+
+I do NOT want a generic Kubernetes security course.
+
+I already understand Kubernetes and cloud/platform engineering.
+
+I am preparing for CKA as well, so assume I understand or can rapidly refresh:
+
+* Pods
+* Deployments
+* Services
+* Namespaces
+* ConfigMaps
+* Secrets
+* RBAC basics
+* kubectl
+* Kubernetes networking
+* NetworkPolicy basics
+* storage
+* kubelet
+* kubeadm
+* Kubernetes control plane
+* Linux administration
+* YAML
+* container runtimes
+* troubleshooting
+
+My challenge is NOT understanding what Kubernetes is.
+
+My challenge is becoming extremely fast and accurate at:
+
+* detecting insecure Kubernetes configurations,
+* fixing them,
+* hardening workloads,
+* hardening cluster components,
+* implementing security controls,
+* using Kubernetes security tools,
+* troubleshooting security failures,
+* understanding runtime attacks,
+* applying least privilege,
+* controlling network access,
+* securing the software supply chain,
+* responding to exam scenarios under time pressure.
+
+Use this training model:
+
+> **Security concept refresh → identify vulnerability → command/tool → remediation → verify → harder variation → timed CKS task.**
+
+The preparation must be heavily hands-on.
+
+---
+
+# CRITICAL FIRST STEP — VERIFY THE CURRENT CKS EXAM
+
+Before teaching me anything, perform deep research on the **CURRENT Certified Kubernetes Security Specialist exam**.
+
+Do NOT assume an older CKS curriculum is still active.
+
+Verify using official sources:
+
+* Linux Foundation
+* CNCF
+* Kubernetes official documentation
+* current CKS curriculum
+* current CKS exam handbook
+* current certification requirements
+* current exam environment
+* current Kubernetes version if published
+* allowed documentation
+* permitted tools
+* installed tools
+* browser restrictions
+* terminal restrictions
+* exam duration
+* passing score
+* retake policy
+* exam simulator availability
+* current certification prerequisites
+* certification validity period
+
+Specifically verify whether CKA certification is currently required before CKS certification can be issued and how that rule currently works.
+
+Do not rely on memory.
+
+Create:
+
+# CURRENT CKS EXAM SNAPSHOT
+
+Include:
+
+| Item                   | Current Verified Information |
+| ---------------------- | ---------------------------- |
+| Exam code/name         |                              |
+| Exam duration          |                              |
+| Passing score          |                              |
+| Kubernetes version     |                              |
+| Domains                |                              |
+| Domain weight          |                              |
+| CKA prerequisite       |                              |
+| Allowed documentation  |                              |
+| Exam environment       |                              |
+| Retake policy          |                              |
+| Simulator              |                              |
+| Certification validity |                              |
+
+Clearly distinguish:
+
+**Officially verified**
+
+from
+
+**community reported.**
+
+---
+
+# MY BACKGROUND
+
+Assume I am an experienced:
+
+* Cloud Engineer
+* Platform Engineer
+* DevOps Engineer
+* Kubernetes Engineer
+* AI/ML Platform Engineer
+
+I already understand practical Kubernetes.
+
+Therefore do NOT spend excessive time explaining:
+
+* what a Pod is,
+* what a Deployment is,
+* why containers exist,
+* basic Docker concepts,
+* basic cloud computing,
+* basic networking.
+
+Instead focus almost entirely on:
+
+> **How could this Kubernetes configuration be attacked, how do I recognize the weakness, and how do I fix it quickly?**
+
+---
+
+# CORE PREPARATION PHILOSOPHY
+
+CKS preparation should optimize for:
+
+**Security awareness + command speed + remediation speed + verification.**
+
+For every important topic teach me to immediately answer five questions:
+
+1. What is insecure?
+2. Why is it insecure?
+3. What is the fastest safe remediation?
+4. What command/YAML/tool should I use?
+5. How do I prove the remediation worked?
+
+---
+
+# PHASE 1 — OFFICIAL CURRICULUM ANALYSIS
+
+Research the current official CKS curriculum.
+
+Create:
+
+# CURRENT CKS DOMAIN MAP
+
+Use:
+
+| Domain | Official Weight | Exam Importance | Difficulty | My Priority |
+| ------ | --------------: | --------------: | ---------: | ----------- |
+
+Then break each domain into individual competencies.
+
+Assign:
+
+* **P0 — absolutely master**
+* **P1 — extremely important**
+* **P2 — useful**
+* **P3 — lower return**
+
+Do not assign priority solely from official percentage.
+
+Combine:
+
+* official weight,
+* task complexity,
+* likelihood of losing time,
+* community candidate reports,
+* dependency on other skills.
+
+---
+
+# PHASE 2 — DEEP COMMUNITY RESEARCH
+
+Perform broad research into recent legitimate CKS candidate experiences.
+
+Prioritize approximately the last **12–24 months**, with extra emphasis on the newest experiences.
+
+Research:
+
+* Reddit
+* r/kubernetes
+* r/devops
+* Kubernetes certification communities
+* Medium
+* Dev.to
+* GitHub
+* technical blogs
+* LinkedIn public posts
+* YouTube exam-experience videos
+* Killer.sh discussions
+* Killercoda
+* KodeKloud community
+* Kubernetes Slack discussions where publicly indexed
+* CNCF discussions
+* security engineering blogs
+
+Search phrases such as:
+
+"CKS exam experience 2026"
+
+"CKS passed 2026"
+
+"CKS exam Reddit"
+
+"CKS exam difficult"
+
+"CKS exam topics"
+
+"CKS exam security questions"
+
+"CKS runtime security exam"
+
+"CKS Falco exam"
+
+"CKS seccomp exam"
+
+"CKS AppArmor exam"
+
+"CKS NetworkPolicy exam"
+
+"CKS admission controller exam"
+
+"CKS image scanning exam"
+
+"CKS supply chain exam"
+
+"CKS audit log exam"
+
+"CKS RBAC exam"
+
+"CKS Pod Security Admission exam"
+
+"CKS kube-bench exam"
+
+"CKS trivy exam"
+
+"CKS Killer.sh"
+
+Use the CURRENT curriculum to add additional search terms.
+
+Do not stop after a few posts.
+
+Look for recurring patterns across independent reports.
+
+---
+
+# ETHICAL RESEARCH RULE
+
+Do NOT use:
+
+* stolen exam dumps,
+* NDA-violating question banks,
+* leaked current CKS questions,
+* braindumps.
+
+Do not reproduce claimed real questions verbatim.
+
+Candidate experiences should only be used to infer:
+
+* topics,
+* task patterns,
+* difficulty,
+* tooling,
+* common pitfalls,
+* time pressure,
+* recurring competencies.
+
+Then create completely **original CKS-style exercises** testing those same competencies.
+
+---
+
+# PHASE 3 — CANDIDATE INTELLIGENCE MAP
+
+Create:
+
+# WHAT RECENT CKS CANDIDATES CONSISTENTLY REPORT
+
+For every topic report:
+
+| Topic | Mentions | Recency | Confidence | Difficulty | Preparation Priority |
+| ----- | -------: | ------- | ---------- | ---------- | -------------------- |
+
+Categorize evidence:
+
+### Strong Signal
+
+Mentioned by many independent recent candidates.
+
+### Medium Signal
+
+Mentioned repeatedly but not consistently.
+
+### Weak Signal
+
+A small number of anecdotes.
+
+Do not treat a single Reddit comment as evidence of exam frequency.
+
+---
+
+# PHASE 4 — SECURITY ATTACKER MINDSET
+
+Before teaching remediation, teach me how an attacker would view Kubernetes.
+
+Create:
+
+# KUBERNETES ATTACK SURFACE MAP
+
+Cover:
+
+* Kubernetes API server
+* kubelet
+* etcd
+* scheduler
+* controller manager
+* container runtime
+* worker node
+* Pod
+* ServiceAccount
+* Secrets
+* RBAC
+* container image
+* image registry
+* software supply chain
+* admission control
+* networking
+* host filesystem
+* Linux capabilities
+* kernel
+* privileged containers
+* hostPath
+* hostNetwork
+* hostPID
+* hostIPC
+* service account tokens
+* API credentials
+
+For each explain:
+
+### Attack surface
+
+### Possible mistake
+
+### Security consequence
+
+### Detection
+
+### Remediation
+
+### CKS-style task
+
+Keep everything defensive and exam focused.
+
+---
+
+# PHASE 5 — CLUSTER SETUP AND HARDENING
+
+Research the current CKS requirements for cluster hardening.
+
+Focus on:
+
+* Kubernetes control plane security
+* API server security
+* kubelet security
+* etcd security
+* authentication
+* authorization
+* certificates
+* anonymous authentication
+* insecure configuration
+* API exposure
+* service account configuration
+* least privilege
+* CIS Kubernetes Benchmark concepts
+
+Investigate current relevance of tools such as:
+
+* kube-bench
+
+and any newer equivalent/tool currently relevant to the CKS.
+
+For every hardening topic provide:
+
+### Insecure configuration
+
+### Location/file
+
+### Security impact
+
+### Detection command
+
+### Correct secure configuration
+
+### Restart/reload requirement
+
+### Verification command
+
+### Exam mistake
+
+---
+
+# PHASE 6 — CIS BENCHMARK THINKING
+
+I do NOT want to memorize the entire CIS Benchmark.
+
+Instead create:
+
+# CKS CIS HIGH-VALUE CONTROLS
+
+Identify controls most relevant to the exam.
+
+For each explain:
+
+* what it protects,
+* where the configuration lives,
+* what command reveals the problem,
+* what parameter fixes it,
+* whether restarting a component is necessary,
+* how to validate.
+
+Create hands-on tasks around these controls.
+
+---
+
+# PHASE 7 — RBAC MASTERY
+
+Treat Kubernetes RBAC as a P0 topic unless current research indicates otherwise.
+
+Master:
+
+* Role
+* ClusterRole
+* RoleBinding
+* ClusterRoleBinding
+* ServiceAccount
+* subjects
+* verbs
+* resources
+* API groups
+* resourceNames where applicable
+* namespace scope
+* cluster scope
+* aggregation if relevant
+* impersonation if current CKS relevant
+
+Especially master:
+
+```bash
+kubectl auth can-i
+```
+
+and impersonation checks such as:
+
+```bash
+kubectl auth can-i ... --as=...
+```
+
+when relevant.
+
+Train me to answer questions like:
+
+* What permissions does this account have?
+* What permission is excessive?
+* What minimal Role fixes this?
+* Can the user escalate privileges?
+* Does this RoleBinding grant more access than intended?
+
+Create a dedicated section:
+
+# RBAC PRIVILEGE ESCALATION PATTERNS
+
+Teach me common escalation mechanisms at the depth relevant to CKS.
+
+---
+
+# PHASE 8 — SERVICE ACCOUNT SECURITY
+
+Cover:
+
+* ServiceAccounts
+* token mounting
+* projected tokens
+* automountServiceAccountToken
+* workload permissions
+* default ServiceAccount
+* RBAC relationships
+* token exposure
+
+Teach me to identify workloads that receive Kubernetes API credentials unnecessarily.
+
+Create timed remediation exercises.
+
+---
+
+# PHASE 9 — POD SECURITY
+
+This should receive major attention.
+
+Research the CURRENT approach to Kubernetes Pod security.
+
+Verify current relevance of:
+
+* Pod Security Admission
+* Pod Security Standards
+* privileged
+* baseline
+* restricted
+
+and whether older concepts such as PodSecurityPolicy are obsolete for the current exam.
+
+Create:
+
+# POD SECURITY STANDARDS MASTERCLASS
+
+Cover restrictions around:
+
+* privileged containers
+* hostNetwork
+* hostPID
+* hostIPC
+* hostPath
+* Linux capabilities
+* privilege escalation
+* seccomp
+* runAsNonRoot
+* runAsUser
+* readOnlyRootFilesystem
+* root user
+* volume types
+
+Teach me how to transform an insecure Pod into one compatible with a restricted security posture.
+
+---
+
+# PHASE 10 — SECURITY CONTEXT MASTERY
+
+I need to become extremely fast with:
+
+```yaml
+securityContext:
+```
+
+Cover:
+
+* runAsUser
+* runAsGroup
+* runAsNonRoot
+* fsGroup
+* allowPrivilegeEscalation
+* privileged
+* readOnlyRootFilesystem
+* capabilities
+* seccompProfile
+
+Distinguish:
+
+### Pod-level securityContext
+
+from
+
+### Container-level securityContext
+
+Create at least **30 securityContext exercises**.
+
+---
+
+# PHASE 11 — LINUX CAPABILITIES
+
+Teach Linux capabilities at exactly the depth needed for CKS.
+
+Cover high-risk capabilities and concepts such as:
+
+* NET_ADMIN
+* SYS_ADMIN
+* SYS_PTRACE
+* NET_RAW
+* CHOWN
+* DAC_OVERRIDE
+
+Determine which are most relevant based on the current curriculum.
+
+Teach the best-practice pattern:
+
+```yaml
+capabilities:
+  drop:
+  - ALL
+```
+
+then adding only required capabilities where appropriate.
+
+Create scenarios where I must identify excessive capabilities.
+
+---
+
+# PHASE 12 — SECCOMP
+
+Research the CURRENT CKS requirements for seccomp.
+
+Teach:
+
+* RuntimeDefault
+* Localhost
+* Unconfined
+* seccompProfile
+
+Teach me:
+
+* how profiles limit syscalls,
+* where profiles may be stored,
+* how Kubernetes references them,
+* how to apply them,
+* how to troubleshoot a workload failing because of seccomp.
+
+Create multiple hands-on tasks.
+
+---
+
+# PHASE 13 — APPARMOR / LINUX SECURITY MODULES
+
+Verify whether AppArmor is included in the CURRENT CKS.
+
+Do not blindly teach obsolete syntax.
+
+If relevant, cover:
+
+* AppArmor profiles
+* enforcing profiles
+* Kubernetes integration
+* profile loading
+* verification
+* troubleshooting
+
+Also verify whether SELinux is relevant.
+
+Prioritize according to current exam value.
+
+---
+
+# PHASE 14 — NETWORK POLICY MASTERY
+
+Treat NetworkPolicy as an extremely important hands-on topic.
+
+Master:
+
+* ingress
+* egress
+* podSelector
+* namespaceSelector
+* ipBlock
+* ports
+* policyTypes
+
+Train me to create:
+
+* default deny ingress
+* default deny egress
+* allow from specific namespace
+* allow from specific Pods
+* allow DNS
+* allow only one service
+* combinations of selectors
+
+Teach NetworkPolicy behavior very precisely.
+
+Especially cover:
+
+> additive policy behavior.
+
+Create:
+
+### 20 simple NetworkPolicy drills
+
+### 20 exam-level NetworkPolicy tasks
+
+### 10 difficult troubleshooting scenarios
+
+All must have verification techniques.
+
+---
+
+# PHASE 15 — NETWORK SECURITY TROUBLESHOOTING
+
+Teach me how to troubleshoot:
+
+* Pod blocked by NetworkPolicy
+* incorrect namespace label
+* incorrect Pod label
+* egress blocked
+* DNS blocked
+* incorrect port
+* wrong selector
+* missing policyType
+
+Create a diagnostic workflow:
+
+```text
+Pod
+ ↓
+Labels
+ ↓
+Namespace
+ ↓
+NetworkPolicy
+ ↓
+Ingress/Egress
+ ↓
+DNS
+ ↓
+Service/Endpoint
+```
+
+Refine this based on Kubernetes behavior.
+
+---
+
+# PHASE 16 — MINIMIZE MICROSERVICE VULNERABILITIES
+
+Research the current CKS domain around minimizing workload/microservice vulnerabilities.
+
+Cover:
+
+* securityContext
+* privileged containers
+* Linux capabilities
+* host namespaces
+* hostPath
+* read-only filesystem
+* ServiceAccounts
+* NetworkPolicies
+* secrets exposure
+* resource restrictions where security relevant
+
+Create intentionally insecure manifests and ask me to harden them.
+
+---
+
+# PHASE 17 — SUPPLY CHAIN SECURITY
+
+Treat supply-chain security as a major CKS area.
+
+Research current exam expectations around:
+
+* image security
+* trusted registries
+* image scanning
+* image signing
+* artifact validation
+* admission controls
+* secure base images
+* image provenance
+* dependency vulnerabilities
+* SBOM concepts if currently relevant
+
+Determine exact exam depth from current sources.
+
+---
+
+# PHASE 18 — TRIVY / IMAGE SCANNING
+
+Verify whether Trivy is currently provided/relevant in the CKS environment.
+
+If yes, master:
+
+```bash
+trivy image
+```
+
+and other relevant commands.
+
+Teach:
+
+* severity filtering
+* image vulnerability scanning
+* interpreting results
+* fixing image selection
+* identifying vulnerable images
+
+Do NOT spend time on obscure Trivy features irrelevant to CKS.
+
+Create timed exercises such as:
+
+> Find the image with the highest critical vulnerability exposure and replace it with an approved version.
+
+Use original labs.
+
+---
+
+# PHASE 19 — IMAGE POLICY / TRUSTED REGISTRIES
+
+Research current ways the CKS tests restriction of container images.
+
+Cover current relevant technologies such as:
+
+* admission controllers
+* ValidatingAdmissionPolicy
+* admission webhooks
+* image policies
+* trusted registries
+
+Do NOT automatically teach deprecated mechanisms.
+
+Verify what is current.
+
+---
+
+# PHASE 20 — ADMISSION CONTROL
+
+Create a major module on Kubernetes admission control.
+
+Research current CKS coverage of:
+
+* admission controllers
+* mutating admission
+* validating admission
+* admission webhooks
+* ValidatingAdmissionPolicy
+* Pod Security Admission
+* ImagePolicyWebhook if relevant
+
+Teach the flow:
+
+```text
+Request
+   ↓
+Authentication
+   ↓
+Authorization
+   ↓
+Admission
+   ↓
+Persist
+```
+
+Explain exactly where security controls apply.
+
+---
+
+# PHASE 21 — OPA / GATEKEEPER
+
+Determine whether:
+
+* Open Policy Agent,
+* Gatekeeper,
+
+are currently relevant to the CKS exam.
+
+If yes, teach only exam-relevant depth.
+
+If no longer relevant, explicitly say so.
+
+Never waste preparation time on outdated CKS course material.
+
+---
+
+# PHASE 22 — SOFTWARE SUPPLY CHAIN
+
+Create:
+
+# KUBERNETES SECURE SUPPLY CHAIN
+
+Map:
+
+```text
+Developer
+   ↓
+Source Repository
+   ↓
+CI Pipeline
+   ↓
+Build
+   ↓
+Container Image
+   ↓
+Registry
+   ↓
+Admission
+   ↓
+Kubernetes
+   ↓
+Runtime
+```
+
+For every stage identify:
+
+* attack risk,
+* security control,
+* CKS relevance.
+
+---
+
+# PHASE 23 — STATIC ANALYSIS
+
+Research current tools/skills for identifying insecure Kubernetes manifests.
+
+Examples might include:
+
+* kubectl
+* grep
+* Trivy config
+* other provided security tools
+
+Verify current relevance.
+
+Train me to rapidly find dangerous settings such as:
+
+```yaml
+privileged: true
+hostPID: true
+hostNetwork: true
+allowPrivilegeEscalation: true
+runAsUser: 0
+```
+
+and dangerous capabilities.
+
+---
+
+# PHASE 24 — RUNTIME SECURITY
+
+Treat runtime security as a major topic.
+
+Teach:
+
+* runtime behavior monitoring
+* suspicious processes
+* unexpected network activity
+* container escape indicators
+* dangerous shell execution
+* unusual file access
+* privilege escalation
+* crypto mining indicators where conceptually relevant
+
+Focus on CKS scenarios.
+
+---
+
+# PHASE 25 — FALCO
+
+Verify whether Falco is CURRENTLY relevant/provided in the CKS exam.
+
+If yes, make me highly proficient with exam-relevant Falco usage.
+
+Cover:
+
+* Falco rules
+* conditions
+* output
+* filters
+* macros/lists where relevant
+* detecting suspicious processes
+* container activity
+* troubleshooting rules
+
+Create at least **20 Falco exercises** if current exam relevance justifies it.
+
+Do NOT teach Falco broadly if current CKS no longer emphasizes it.
+
+---
+
+# PHASE 26 — AUDIT LOGGING
+
+Teach Kubernetes audit logging thoroughly at exam depth.
+
+Cover:
+
+* audit policies
+* levels
+* None
+* Metadata
+* Request
+* RequestResponse
+* stages
+* users
+* resources
+* namespaces
+* audit log configuration
+
+Teach me to create minimal audit policies quickly.
+
+Example skills:
+
+* log Secret access,
+* log Pod deletion,
+* ignore harmless traffic,
+* log specific namespaces,
+* capture metadata only.
+
+Teach where API server audit parameters are configured.
+
+Create original timed tasks.
+
+---
+
+# PHASE 27 — FORENSICS AND INCIDENT RESPONSE
+
+Create:
+
+# CKS RAPID INCIDENT RESPONSE PLAYBOOK
+
+Given a compromised workload, teach me to:
+
+1. identify suspicious behavior,
+2. preserve useful evidence where appropriate,
+3. isolate the workload,
+4. inspect Pod/container,
+5. inspect processes,
+6. inspect network access,
+7. inspect ServiceAccount/RBAC,
+8. inspect image,
+9. inspect logs/audit,
+10. remediate.
+
+Keep procedures within CKS scope.
+
+---
+
+# PHASE 28 — SECRETS SECURITY
+
+Cover:
+
+* Kubernetes Secrets
+* base64 misconception
+* etcd encryption
+* Secrets mounted as files
+* environment variables
+* RBAC restrictions
+* ServiceAccount access
+* encryption at rest
+
+Teach exactly:
+
+> base64 encoding is NOT encryption.
+
+Research current CKS expectations around encryption providers.
+
+---
+
+# PHASE 29 — ETCD SECURITY
+
+Cover CKS-relevant etcd security:
+
+* TLS
+* access restrictions
+* certificate usage
+* encryption of Kubernetes resources at rest
+* etcd exposure
+
+Create hands-on exercises if part of the current blueprint.
+
+---
+
+# PHASE 30 — ENCRYPTION AT REST
+
+Master Kubernetes encryption configuration if currently tested.
+
+Cover:
+
+```yaml
+EncryptionConfiguration
+```
+
+and current providers such as:
+
+* identity
+* aesgcm
+* aescbc
+* secretbox
+* KMS where relevant
+
+Verify currently recommended options.
+
+Teach:
+
+* configuring encryption,
+* API server flag,
+* key ordering,
+* migration/re-encryption considerations,
+* verification.
+
+---
+
+# PHASE 31 — TLS AND CERTIFICATES
+
+Only cover certificate material that directly affects CKS.
+
+Teach how to inspect:
+
+```bash
+openssl x509
+```
+
+and identify:
+
+* expiration,
+* issuer,
+* subject,
+* SAN,
+* certificate file configuration.
+
+Include troubleshooting scenarios if current candidate reports show importance.
+
+---
+
+# PHASE 32 — KUBELET SECURITY
+
+Create a dedicated kubelet security module.
+
+Research:
+
+* authentication
+* authorization
+* anonymous access
+* webhook authorization
+* client certificates
+* kubelet API exposure
+
+Teach me where configuration is located and how to verify effective settings.
+
+---
+
+# PHASE 33 — API SERVER HARDENING
+
+Focus on exam-relevant API server options.
+
+Examples to investigate:
+
+* anonymous-auth
+* authorization-mode
+* admission plugins
+* audit flags
+* encryption provider config
+* service account settings
+
+Do not memorize every kube-apiserver flag.
+
+Prioritize only high-value CKS controls.
+
+---
+
+# PHASE 34 — CONTAINER RUNTIME SECURITY
+
+Research current runtime expectations.
+
+Cover if relevant:
+
+* containerd
+* crictl
+* runtime configuration
+* runtime classes
+* sandboxing
+* seccomp
+
+Do not teach obsolete Docker-specific Kubernetes administration unless current exam material requires it.
+
+---
+
+# PHASE 35 — SECURITY TOOLBOX
+
+Create:
+
+# CKS SECURITY COMMAND TOOLBOX
+
+Include only commands with strong CKS value.
+
+Potential examples:
+
+```bash
+kubectl
+crictl
+systemctl
+journalctl
+ps
+ss
+ip
+curl
+grep
+awk
+sed
+find
+openssl
+trivy
+kube-bench
+falco
+apparmor_parser
+```
+
+Verify tool availability/current relevance.
+
+For every command give practical CKS examples.
+
+---
+
+# PHASE 36 — GREP / SEARCH SPEED
+
+I need to be extremely fast at inspecting configuration.
+
+Teach techniques such as:
+
+```bash
+grep -R
+grep -n
+grep -i
+find
+```
+
+for:
+
+* static Pod manifests
+* API server flags
+* kubelet config
+* audit configuration
+* security contexts
+* policy files.
+
+Create micro-drills requiring rapid configuration discovery.
+
+---
+
+# PHASE 37 — YAML SPEED
+
+Create a:
+
+# CKS YAML MUSCLE MEMORY PROGRAM
+
+I should become fast at writing/modifying:
+
+* securityContext
+* capabilities
+* seccomp
+* NetworkPolicy
+* RBAC
+* ServiceAccount
+* Pod Security Admission labels
+* audit policy
+* encryption config
+* admission resources
+
+Teach when to:
+
+* generate YAML,
+* copy from official docs,
+* patch,
+* edit,
+* use kubectl set where relevant.
+
+---
+
+# PHASE 38 — KUBERNETES DOCUMENTATION NAVIGATION
+
+Create:
+
+# CKS DOCUMENTATION NAVIGATION MAP
+
+For every important exam task tell me the search keywords I should use.
+
+Examples:
+
+"Pod Security Standards"
+
+"security context"
+
+"NetworkPolicy"
+
+"RBAC"
+
+"ServiceAccount"
+
+"seccomp"
+
+"audit"
+
+"encryption data at rest"
+
+"admission controllers"
+
+etc.
+
+Research current documentation rules.
+
+Teach me to navigate official Kubernetes docs extremely fast.
+
+---
+
+# PHASE 39 — CURRENT VS OBSOLETE CKS CONTENT
+
+This is critical.
+
+Create:
+
+# CKS CONTENT THAT OLDER COURSES MAY TEACH INCORRECTLY
+
+Investigate older CKS material involving:
+
+* PodSecurityPolicy
+* Docker runtime
+* deprecated API versions
+* deprecated admission mechanisms
+* older AppArmor annotations
+* old seccomp annotations
+* older Kubernetes CLI syntax
+
+Then create:
+
+# CURRENT REPLACEMENTS I MUST KNOW
+
+Prevent me from preparing for an obsolete CKS version.
+
+---
+
+# PHASE 40 — CKS TASK FREQUENCY MAP
+
+Combine official weighting and community intelligence.
+
+Create:
+
+| Task Pattern | Frequency | Difficulty | Time Cost | Risk | Priority |
+| ------------ | --------- | ---------- | --------- | ---- | -------- |
+
+Examples to investigate:
+
+* NetworkPolicy
+* RBAC
+* securityContext
+* Pod Security
+* image scanning
+* audit
+* runtime detection
+* admission
+* kube-bench
+* seccomp
+* secrets
+* encryption
+* service accounts
+
+Do not assume frequencies before research.
+
+---
+
+# PHASE 41 — RAPID SECURITY REFRESH
+
+Create:
+
+# CKS RAPID KNOWLEDGE REFRESH
+
+For every major topic provide:
+
+### Security objective
+
+### Attack prevented
+
+### Kubernetes mechanism
+
+### Configuration
+
+### Command
+
+### Verification
+
+### Common CKS trap
+
+### Mini lab
+
+Keep theory concise.
+
+---
+
+# PHASE 42 — "FIND THE VULNERABILITY" TRAINING
+
+Create at least **50 insecure Kubernetes manifests**.
+
+Each exercise should ask me:
+
+> Identify every security weakness.
+
+Examples should contain combinations such as:
+
+```yaml
+privileged: true
+```
+
+```yaml
+runAsUser: 0
+```
+
+```yaml
+allowPrivilegeEscalation: true
+```
+
+```yaml
+hostNetwork: true
+```
+
+```yaml
+hostPID: true
+```
+
+```yaml
+hostPath:
+```
+
+dangerous capabilities,
+
+excessive ServiceAccount permissions,
+
+no NetworkPolicy,
+
+untrusted image,
+
+etc.
+
+Then require me to remediate them.
+
+---
+
+# PHASE 43 — "HARDEN THIS POD" DRILLS
+
+Create at least **30 Pod-hardening tasks**.
+
+Provide an insecure Pod.
+
+Require me to implement the minimum necessary security controls.
+
+Each should include:
+
+### Task
+
+### Time target
+
+### Remediation
+
+### Verification
+
+### Common mistake
+
+---
+
+# PHASE 44 — MICRO DRILLS
+
+Create at least **75 CKS micro-drills**.
+
+Time targets:
+
+* 30 seconds
+* 1 minute
+* 2 minutes
+* 3 minutes
+* 5 minutes
+
+Examples:
+
+> Disable automatic ServiceAccount token mounting.
+
+> Drop all Linux capabilities.
+
+> Add NET_BIND_SERVICE only.
+
+> Apply RuntimeDefault seccomp.
+
+> Create default-deny NetworkPolicy.
+
+> Test whether ServiceAccount X can delete Secrets.
+
+> Identify which Pod runs privileged.
+
+The objective is command and YAML reflex.
+
+---
+
+# PHASE 45 — TROUBLESHOOTING SECURITY SCENARIOS
+
+Create at least **40 security troubleshooting exercises**.
+
+Examples:
+
+* Pod blocked after NetworkPolicy
+* workload denied by Pod Security
+* seccomp prevents application start
+* RBAC denies legitimate access
+* RBAC accidentally grants excessive access
+* admission policy blocks image
+* Falco rule does not trigger
+* audit log missing expected event
+* encrypted Secret remains readable directly from etcd because config is wrong
+* kubelet authentication insecure
+* image scanner discovers critical CVE
+
+Force investigation before showing solutions.
+
+---
+
+# PHASE 46 — ORIGINAL CKS QUESTION BANK
+
+Generate at least **150 original hands-on CKS tasks**.
+
+Distribute them based on current domain weight and candidate frequency.
+
+Every task must contain:
+
+### Task
+
+### Context
+
+### Security objective
+
+### Time limit
+
+### Difficulty
+
+### Priority
+
+Do NOT expose the solution immediately.
+
+Later provide:
+
+### Solution
+
+### Fast solution
+
+### Verification
+
+### Why it matters
+
+### Common trap
+
+---
+
+# PHASE 47 — CANDIDATE-INSPIRED QUESTIONS
+
+Create:
+
+# QUESTIONS INSPIRED BY RECENT CKS CANDIDATE EXPERIENCES
+
+Example methodology:
+
+> Multiple recent candidates report NetworkPolicy troubleshooting being important.
+
+Do NOT copy their question.
+
+Instead create a completely new scenario testing the same competency.
+
+For every candidate-derived pattern provide:
+
+### Community signal
+
+### Skill
+
+### Original exercise
+
+### Expected time
+
+### Difficulty
+
+### Solution
+
+### Verification
+
+---
+
+# PHASE 48 — FULL MOCK EXAMS
+
+Create at least **4 full CKS mock exams**.
+
+## Mock 1
+
+Moderate difficulty.
+
+## Mock 2
+
+Current exam difficulty.
+
+## Mock 3
+
+Heavy troubleshooting/time pressure.
+
+## Mock 4
+
+Harder than the real exam.
+
+Follow:
+
+* current official domain weighting,
+* realistic task complexity,
+* current Kubernetes behavior,
+* multiple contexts if appropriate,
+* hands-on execution,
+* realistic time constraints.
+
+Do NOT reveal answers until the entire mock is complete.
+
+Provide weighted scoring.
+
+---
+
+# PHASE 49 — KILLER.SH RESEARCH
+
+Research the current CKS Killer.sh simulator.
+
+Determine:
+
+* how close it is to the current real exam,
+* whether it is harder,
+* best time to use attempts,
+* weaknesses,
+* current candidate feedback.
+
+Then create a strategy:
+
+# HOW TO USE KILLER.SH FOR MAXIMUM VALUE
+
+Do not recommend wasting attempts too early.
+
+---
+
+# PHASE 50 — OTHER LAB RESOURCES
+
+Compare current resources such as:
+
+* Killer.sh
+* Killercoda
+* KodeKloud CKS
+* official Kubernetes labs
+* GitHub CKS labs
+* relevant security labs
+
+Recommend the **smallest set of high-quality resources**.
+
+Do not recommend 15 overlapping courses.
+
+---
+
+# PHASE 51 — 7-DAY CKS PLAN
+
+Create an intensive plan for someone who already knows Kubernetes.
+
+Every day should include:
+
+### Knowledge refresh
+
+### YAML/command drills
+
+### security labs
+
+### troubleshooting
+
+### timed tasks
+
+### weak-area revision
+
+Be precise.
+
+Instead of:
+
+> Study NetworkPolicy.
+
+say:
+
+> Create 8 NetworkPolicies from scratch, troubleshoot 4 broken policies, and complete a timed 20-minute networking block.
+
+---
+
+# PHASE 52 — 14-DAY CKS PLAN
+
+Create a detailed 14-day first-attempt preparation plan.
+
+This should probably be the default option for an experienced Kubernetes engineer unless research suggests otherwise.
+
+Progress approximately from:
+
+### Days 1–4
+
+Security foundations + high-value controls
+
+### Days 5–9
+
+Intensive hands-on domains
+
+### Days 10–12
+
+Troubleshooting + mixed drills
+
+### Days 13–14
+
+Mocks + final remediation
+
+Modify based on research.
+
+---
+
+# PHASE 53 — 21-DAY CKS PLAN
+
+Create a deeper 21-day plan for maximum confidence.
+
+Use spaced repetition.
+
+Topics I perform well in should progressively receive less time.
+
+Weak topics should receive more drills.
+
+---
+
+# PHASE 54 — ADAPTIVE TRAINING
+
+Track:
+
+| Skill | Accuracy | Speed | Confidence | Error Type | Next Drill |
+| ----- | -------: | ----: | ---------- | ---------- | ---------- |
+
+Classify mistakes:
+
+### Knowledge Gap
+
+### Kubernetes Syntax Gap
+
+### Linux Gap
+
+### Security Concept Gap
+
+### Tool Usage Gap
+
+### Troubleshooting Gap
+
+### Documentation Navigation Gap
+
+### Context/Namespace Mistake
+
+### Time Management Mistake
+
+### Verification Failure
+
+Adjust future drills accordingly.
+
+---
+
+# PHASE 55 — INTERACTIVE EXAM COACH MODE
+
+After completing the research and preparation system, become my CKS examiner.
+
+Use this loop:
+
+## 1. Give me ONE hands-on task.
+
+Do not show the solution.
+
+## 2. Wait for my commands/answer.
+
+## 3. Evaluate technically.
+
+## 4. Identify security mistakes.
+
+## 5. Show the fastest correct CKS solution.
+
+## 6. Show verification.
+
+## 7. Give me a harder variation.
+
+## 8. Track my performance.
+
+Continue until the operation becomes automatic.
+
+---
+
+# PHASE 56 — EXAM SPEED TARGETS
+
+Determine realistic targets for tasks such as:
+
+* RBAC fix
+* ServiceAccount restriction
+* NetworkPolicy
+* securityContext
+* Pod Security configuration
+* seccomp
+* audit policy
+* image scan
+* manifest hardening
+* kube-bench remediation
+* runtime detection
+* encryption configuration
+
+Create:
+
+| Task | Beginner Time | Exam-Ready Target |
+| ---- | ------------: | ----------------: |
+
+Use realistic estimates.
+
+---
+
+# PHASE 57 — CONTEXT SAFETY
+
+A devastating practical-exam mistake is modifying the wrong cluster.
+
+Create a ritual I execute before every question:
+
+```text
+CONTEXT
+→ NAMESPACE
+→ INSPECT
+→ MODIFY
+→ VERIFY
+```
+
+Research current candidate recommendations and improve it.
+
+Make this automatic.
+
+---
+
+# PHASE 58 — VERIFICATION FIRST CULTURE
+
+Every exercise MUST include:
+
+# VERIFY
+
+Examples:
+
+```bash
+kubectl get
+kubectl describe
+kubectl auth can-i
+kubectl exec
+kubectl logs
+curl
+ps
+journalctl
+trivy
+kube-bench
+```
+
+depending on the problem.
+
+A configuration is not complete until I have verified the intended security property.
+
+---
+
+# PHASE 59 — EXAM TIME MANAGEMENT
+
+Research current exam duration/task style.
+
+Create a practical scoring strategy.
+
+Teach:
+
+* initial scan,
+* easy-points-first strategy,
+* question time limits,
+* when to skip,
+* how to flag,
+* how much review time to reserve,
+* when documentation search is taking too long.
+
+Create a strategy based on maximizing points.
+
+---
+
+# PHASE 60 — CKS EXAM TRAPS
+
+Create:
+
+# 50 MISTAKES THAT CAN COST ME THE CKS
+
+Examples to investigate:
+
+* wrong context
+* wrong namespace
+* accidentally locking myself out
+* overly broad RBAC
+* incorrect NetworkPolicy selector
+* forgetting DNS egress
+* applying securityContext at wrong level
+* forgetting to verify
+* using deprecated security syntax
+* not restarting control plane component after manifest modification
+* destroying working configuration
+* spending too much time finding documentation
+* applying a control stricter than requested and breaking workload
+
+Base these partly on recent candidate experiences.
+
+---
+
+# PHASE 61 — ATTACK → DEFENSE MEMORY MAP
+
+Create one of my primary revision sheets:
+
+# ATTACK → DEFENSE
+
+Examples:
+
+```text
+Excessive API permissions
+→ RBAC least privilege
+```
+
+```text
+Unnecessary Kubernetes API token
+→ automountServiceAccountToken: false
+```
+
+```text
+Container privilege escalation
+→ allowPrivilegeEscalation: false
+```
+
+```text
+Excessive Linux capabilities
+→ drop ALL + add only required
+```
+
+```text
+East-west lateral movement
+→ NetworkPolicy
+```
+
+```text
+Untrusted/vulnerable image
+→ scanning + admission controls
+```
+
+```text
+Suspicious runtime behavior
+→ runtime monitoring
+```
+
+Create as many high-value mappings as necessary.
+
+---
+
+# PHASE 62 — "SEE THIS → THINK THIS" SHEET
+
+Create:
+
+# CKS SECURITY TRIGGER SHEET
+
+Example:
+
+If I see:
+
+```yaml
+privileged: true
+```
+
+Think:
+
+> Immediate container escape / host compromise risk.
+
+If I see:
+
+```yaml
+hostPath:
+  path: /
+```
+
+Think:
+
+> Container potentially accessing host filesystem.
+
+If I see:
+
+```yaml
+automountServiceAccountToken: true
+```
+
+Think:
+
+> Does this workload actually require Kubernetes API access?
+
+Create approximately **100 such security recognition patterns**.
+
+---
+
+# PHASE 63 — CKS MASTER CHEAT SHEET
+
+Create a compact final reference covering:
+
+## RBAC
+
+## ServiceAccounts
+
+## NetworkPolicy
+
+## securityContext
+
+## Linux capabilities
+
+## seccomp
+
+## Pod Security
+
+## image security
+
+## Trivy
+
+## admission controls
+
+## audit
+
+## runtime security
+
+## Falco if relevant
+
+## kube-bench
+
+## encryption
+
+## Linux commands
+
+## Kubernetes docs searches
+
+## verification commands
+
+Keep it practical and command-heavy.
+
+---
+
+# PHASE 64 — FINAL 48 HOURS
+
+Create:
+
+# 48 HOURS BEFORE CKS
+
+What to drill.
+
+# 24 HOURS BEFORE CKS
+
+What to revise.
+
+# EXAM MORNING
+
+What to review.
+
+# LAST 30 MINUTES
+
+Only the highest-value material.
+
+Tell me what NOT to learn at the last minute.
+
+---
+
+# PHASE 65 — GO / NO-GO READINESS GATE
+
+Do NOT say I am ready simply because I finished a course.
+
+Define measurable standards.
+
+Create:
+
+# CKS EXAM READINESS SCORECARD
+
+Example categories:
+
+| Skill             | Accuracy | Speed | Confidence |
+| ----------------- | -------: | ----: | ---------: |
+| RBAC              |          |       |            |
+| NetworkPolicy     |          |       |            |
+| Pod Security      |          |       |            |
+| securityContext   |          |       |            |
+| Supply Chain      |          |       |            |
+| Runtime Security  |          |       |            |
+| Audit             |          |       |            |
+| Cluster Hardening |          |       |            |
+| Linux Security    |          |       |            |
+
+Use:
+
+### RED
+
+Not ready.
+
+### AMBER
+
+Possible pass but too much risk.
+
+### GREEN
+
+Strong first-attempt probability.
+
+Research realistic thresholds.
+
+---
+
+# MULTI-AGENT RESEARCH APPROACH
+
+If agent/sub-agent functionality is available, deploy specialized research agents.
+
+### Agent 1 — Official CKS Curriculum Analyst
+
+Verify current curriculum, rules and exam environment.
+
+### Agent 2 — Recent Candidate Researcher
+
+Analyze Reddit and recent CKS experiences.
+
+### Agent 3 — Kubernetes Security Expert
+
+Validate Kubernetes security concepts.
+
+### Agent 4 — Linux Security Specialist
+
+Validate capabilities, seccomp, AppArmor and host security.
+
+### Agent 5 — Network Security Specialist
+
+Validate every NetworkPolicy exercise.
+
+### Agent 6 — RBAC Specialist
+
+Analyze least privilege and escalation scenarios.
+
+### Agent 7 — Supply Chain Specialist
+
+Research scanning, signing and admission controls.
+
+### Agent 8 — Runtime Security Specialist
+
+Research current runtime security tooling.
+
+### Agent 9 — CKS Lab Designer
+
+Create original exam-level hands-on exercises.
+
+### Agent 10 — Troubleshooting Specialist
+
+Create broken security scenarios.
+
+### Agent 11 — Exam Strategy Specialist
+
+Optimize timing and scoring.
+
+### Agent 12 — Technical Auditor
+
+Validate every command, YAML manifest, API version and answer.
+
+The agents should challenge each other's findings rather than blindly agree.
+
+---
+
+# TECHNICAL VALIDATION REQUIREMENT
+
+Every exercise must be technically validated.
+
+Check:
+
+* API versions
+* YAML structure
+* NetworkPolicy semantics
+* RBAC semantics
+* securityContext field level
+* Pod Security behavior
+* seccomp configuration
+* admission configuration
+* audit policy syntax
+* Linux commands
+* tooling syntax
+* Kubernetes version compatibility
+
+Do not create commands that merely look plausible.
+
+---
+
+# PREPARATION DISTRIBUTION
+
+Start approximately with:
+
+**10% security knowledge refresh**
+
+**20% individual security controls**
+
+**45% hands-on security remediation**
+
+**15% troubleshooting / incident scenarios**
+
+**10% mock exams / strategy**
+
+Adjust based on current curriculum.
+
+CKS is practical.
+
+Therefore:
+
+> **Doing security work must dominate reading about security.**
+
+---
+
+# OUTPUT ORDER
+
+Produce the final research in this order:
+
+## 1. Executive Summary
+
+## 2. Current CKS Exam Snapshot
+
+## 3. Current Domains and Weightings
+
+## 4. What Changed Recently
+
+## 5. Recent Candidate Intelligence
+
+## 6. P0/P1/P2/P3 Priority Matrix
+
+## 7. Kubernetes Security Attack Surface
+
+## 8. Rapid Security Refresh
+
+## 9. Cluster Hardening
+
+## 10. RBAC
+
+## 11. ServiceAccounts
+
+## 12. Pod Security
+
+## 13. SecurityContext
+
+## 14. Linux Capabilities
+
+## 15. Seccomp / AppArmor
+
+## 16. NetworkPolicy
+
+## 17. Supply Chain Security
+
+## 18. Image Scanning
+
+## 19. Admission Control
+
+## 20. Secrets / Encryption
+
+## 21. Audit Logging
+
+## 22. Runtime Security
+
+## 23. Falco if Currently Relevant
+
+## 24. kube-bench / CIS
+
+## 25. Linux Security Commands
+
+## 26. Documentation Navigation
+
+## 27. Current vs Obsolete CKS Material
+
+## 28. Candidate-Inspired Original Exercises
+
+## 29. 50 Vulnerability-Finding Tasks
+
+## 30. 30 Pod-Hardening Tasks
+
+## 31. 75 Micro Drills
+
+## 32. 40 Troubleshooting Scenarios
+
+## 33. 150+ CKS Hands-On Questions
+
+## 34. Four Full Mock Exams
+
+## 35. Killer.sh Strategy
+
+## 36. Best Current Lab Resources
+
+## 37. 7-Day Plan
+
+## 38. 14-Day Plan
+
+## 39. 21-Day Plan
+
+## 40. Exam Time Strategy
+
+## 41. Attack → Defense Sheet
+
+## 42. See This → Think This Sheet
+
+## 43. 50 Exam Traps
+
+## 44. Master CKS Cheat Sheet
+
+## 45. Final 48-Hour Strategy
+
+## 46. GO / NO-GO Readiness Scorecard
+
+## 47. Sources
+
+---
+
+# FINAL OBJECTIVE
+
+The goal is NOT simply to make me knowledgeable about Kubernetes security.
+
+The goal is to train me until I see something such as:
+
+```yaml
+securityContext:
+  privileged: true
+```
+
+and immediately think:
+
+> "This container is privileged. I know the risk, I know the exact YAML field to change, I know which additional security settings I should inspect, and I can remediate and verify it in under a few minutes."
+
+When I see excessive RBAC:
+
+> "I know exactly how to identify the effective permission, reduce it to least privilege, and validate it with kubectl auth can-i."
+
+When I see a networking requirement:
+
+> "I can translate it directly into a NetworkPolicy without experimenting for ten minutes."
+
+When I see suspicious runtime activity:
+
+> "I know which tool to inspect, what signal matters, and how to isolate the affected workload."
+
+Train me to think:
+
+**DETECT → UNDERSTAND → REMEDIATE → VERIFY.**
+
+Optimize everything for:
+
+**PASSING THE CURRENT CKS EXAM ON MY FIRST ATTEMPT.**
+
+Accuracy > quantity.
+
+Current Kubernetes security practices > obsolete CKS tutorials.
+
+Hands-on execution > passive learning.
+
+Security remediation speed > theoretical depth.
+
+Official documentation > memorizing giant YAML files.
+
+Understanding attack paths > memorizing isolated settings.
+
+Verification > assuming the task is complete.
+
+Exam points > perfection.
+
+Start by performing deep research.
+
+Do NOT immediately generate the entire course from your internal knowledge.
+
+First:
+
+1. verify the current CKS exam blueprint,
+2. verify the current Kubernetes version and exam environment,
+3. research recent candidate experiences,
+4. identify current high-frequency task patterns,
+5. identify obsolete CKS preparation material,
+6. build the P0/P1/P2/P3 priority model,
+7. and only then construct my complete CKS preparation system.

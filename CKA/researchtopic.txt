@@ -1,0 +1,1549 @@
+# Deep Research Mission: Prepare Me to Pass the CKA Exam on My First Attempt
+
+You are going to act as an **elite CKA (Certified Kubernetes Administrator) exam-preparation research team, Kubernetes instructor, Linux/Kubernetes lab designer, exam strategist, and performance coach**.
+
+Your objective is very specific:
+
+> **Prepare me to pass the current CKA exam on my FIRST ATTEMPT with a strong margin, while spending my preparation time almost exclusively on skills that have direct exam value.**
+
+I do **not** want a generic Kubernetes course.
+
+I already know Kubernetes and have practical cloud/platform engineering experience, but some Kubernetes administration skills and commands need to be refreshed. Therefore, I need a preparation system optimized for:
+
+1. refreshing forgotten Kubernetes knowledge,
+2. mastering the exact skills tested in the CKA,
+3. dramatically improving kubectl/Linux/YAML speed,
+4. learning common CKA task patterns,
+5. identifying high-frequency or difficult areas reported by recent candidates,
+6. practicing realistic hands-on tasks,
+7. developing exam-time troubleshooting ability,
+8. completing tasks quickly enough to comfortably finish the real exam,
+9. recognizing when to skip a difficult question and return later,
+10. passing the CKA on my first attempt.
+
+---
+
+# MY BACKGROUND
+
+Assume the following about me.
+
+I am an experienced Cloud / Platform / DevOps engineer.
+
+I already understand many Kubernetes concepts including things such as:
+
+* Pods
+* Deployments
+* ReplicaSets
+* Services
+* ConfigMaps
+* Secrets
+* Namespaces
+* kubectl
+* YAML
+* container images
+* Kubernetes networking basics
+* Kubernetes storage basics
+* Kubernetes architecture
+* cloud-managed Kubernetes
+* troubleshooting
+* CI/CD
+* Helm
+* infrastructure automation
+
+However, I may have forgotten syntax, commands, troubleshooting workflows, administrative procedures, and some Kubernetes internals.
+
+Therefore:
+
+**Do NOT teach me Kubernetes as if I were a beginner.**
+
+Instead use this model:
+
+**Concept refresh → command → hands-on task → troubleshooting variation → timed task → exam trick/pitfall.**
+
+For basic subjects, keep explanations concise.
+
+Spend significantly more time on things that require actual administrator-level execution.
+
+---
+
+# PRIMARY RESEARCH REQUIREMENT
+
+Before creating my study material, perform **deep web research on the CURRENT CKA exam**.
+
+Do not rely only on your existing training knowledge because the exam, Kubernetes version, allowed documentation, curriculum, interface, or candidate experiences may have changed.
+
+Verify current information as of today.
+
+---
+
+# PHASE 1 — OFFICIAL CKA RESEARCH
+
+Start with authoritative sources.
+
+Research current information from sources such as:
+
+* Linux Foundation
+* CNCF
+* Kubernetes official documentation
+* official CKA curriculum / exam domains
+* official exam handbook
+* official exam FAQs
+* current exam environment documentation
+* current allowed documentation/resources
+* current Kubernetes version used by the exam if officially stated
+* current exam duration
+* passing score
+* number or approximate number of tasks if officially documented
+* exam retake policy
+* exam simulator availability
+* remote proctoring requirements
+* exam interface
+* terminal restrictions
+* browser/documentation restrictions
+
+Explicitly distinguish:
+
+**Verified official information**
+
+from
+
+**community-reported information.**
+
+Create a section called:
+
+# CURRENT CKA EXAM SNAPSHOT
+
+Include:
+
+* exam domains
+* percentage weighting
+* Kubernetes version
+* exam duration
+* passing score
+* exam delivery platform
+* allowed documentation
+* retake rules
+* simulator availability
+* major changes made recently to the CKA
+* anything that changed compared with older CKA preparation advice
+
+If information cannot be verified, label it clearly rather than guessing.
+
+---
+
+# PHASE 2 — COMMUNITY INTELLIGENCE RESEARCH
+
+Now perform extensive research across legitimate public discussions about recent CKA experiences.
+
+Search sources such as:
+
+* Reddit
+* r/kubernetes
+* r/devops
+* r/CKA or certification-related communities if active
+* GitHub
+* Medium
+* personal technical blogs
+* LinkedIn posts where publicly accessible
+* Hacker News where relevant
+* Dev.to
+* Kubernetes forums
+* Stack Overflow
+* YouTube descriptions/comments where useful
+* certification preparation communities
+* recent CKA experience articles
+* Killercoda discussions
+* KodeKloud community discussions
+* Killer.sh discussions
+* other credible Kubernetes communities
+
+Prioritize experiences from approximately the **last 12–24 months**, with extra weight on the newest reports.
+
+Search using combinations such as:
+
+"CKA exam experience"
+
+"CKA passed"
+
+"CKA 2026"
+
+"CKA 2025"
+
+"recent CKA questions"
+
+"CKA exam tasks"
+
+"CKA difficult questions"
+
+"CKA exam Kubernetes"
+
+"CKA tips Reddit"
+
+"CKA exam experience Reddit"
+
+"passed CKA Reddit"
+
+"CKA Killer.sh comparison"
+
+"CKA exam troubleshooting"
+
+"CKA exam networking questions"
+
+"CKA exam etcd"
+
+"CKA exam kubeadm"
+
+"CKA exam upgrade cluster"
+
+"CKA exam Gateway API"
+
+"CKA exam Helm"
+
+"CKA exam CRD"
+
+"CKA exam NetworkPolicy"
+
+and other queries you discover during research.
+
+Do not stop after reading five or ten posts.
+
+Search broadly enough to identify recurring patterns.
+
+---
+
+# IMPORTANT ETHICAL / QUALITY RULE
+
+I want the advantages of community intelligence, but **do not use stolen exam dumps, NDA-violating braindumps, or reproduce confidential CKA questions verbatim**.
+
+If candidates describe tasks they remember, use those reports only to identify:
+
+* skills being tested,
+* task structure,
+* difficulty,
+* common traps,
+* troubleshooting patterns,
+* time requirements.
+
+Then create **new original practice tasks testing the same skills**.
+
+For example, instead of reproducing someone's claimed real exam question:
+
+> "Create pod X in namespace Y..."
+
+extract the underlying competency:
+
+> "candidate needed to create/modify workload resources quickly using imperative commands and YAML."
+
+Then create several original exercises around that competency.
+
+---
+
+# PHASE 3 — CREATE A CKA FREQUENCY MAP
+
+From official curriculum + community research, create a matrix:
+
+| Skill | Official Weight | Candidate Frequency | Difficulty | Time Cost | Failure Risk | Priority |
+| ----- | --------------: | ------------------: | ---------: | --------: | -----------: | -------: |
+
+Classify frequency as:
+
+* Extremely Common
+* Very Common
+* Common
+* Occasional
+* Rare
+
+Classify preparation priority as:
+
+* P0 — absolutely master
+* P1 — very important
+* P2 — useful
+* P3 — low return
+
+I want to know:
+
+> **If I have limited preparation time, what are the skills that give me the greatest probability of passing?**
+
+---
+
+# PHASE 4 — IDENTIFY RECURRING CKA TASK PATTERNS
+
+Create a section:
+
+# TOP CKA TASK PATTERNS
+
+Identify recurring patterns mentioned by candidates.
+
+For each pattern provide:
+
+### Skill tested
+
+### What the task usually looks like
+
+### Commands I need
+
+### Files/directories commonly involved
+
+### Kubernetes documentation page worth knowing
+
+### Common mistakes
+
+### Fastest solution strategy
+
+### Typical troubleshooting variation
+
+### Estimated time target
+
+### Original practice task
+
+### Hard-mode version
+
+Do this for every important exam skill.
+
+---
+
+# TOPICS TO INVESTIGATE ESPECIALLY CAREFULLY
+
+Do not assume this list is the current syllabus. Verify everything against the latest official curriculum.
+
+Research whether and how heavily the current CKA tests skills related to:
+
+## Cluster Architecture
+
+* control plane components
+* kube-apiserver
+* kube-controller-manager
+* kube-scheduler
+* etcd
+* kubelet
+* kube-proxy
+* static Pods
+* manifests
+* certificates
+* cluster component troubleshooting
+
+## kubeadm
+
+* kubeadm cluster creation
+* join
+* token
+* certificates
+* control plane operations
+* kubeadm upgrade
+* node upgrade
+* drain
+* cordon
+* uncordon
+
+## etcd
+
+* snapshot
+* backup
+* restore
+* ETCDCTL_API
+* endpoints
+* certificates
+* restore location
+* changing etcd data directory
+* validating restored cluster state
+
+## Workloads
+
+* Pods
+* Deployments
+* ReplicaSets
+* DaemonSets
+* StatefulSets
+* Jobs
+* CronJobs
+* rolling updates
+* rollback
+* scaling
+* image changes
+* rollout history
+* probes
+* init containers
+* sidecars
+* resources
+* environment variables
+* ConfigMaps
+* Secrets
+
+## Scheduling
+
+* nodeSelector
+* node affinity
+* pod affinity
+* anti-affinity
+* taints
+* tolerations
+* labels
+* manual scheduling
+* scheduler behavior
+
+## Networking
+
+Give networking very careful treatment.
+
+Investigate:
+
+* Services
+* ClusterIP
+* NodePort
+* ExternalName
+* EndpointSlice
+* DNS
+* CoreDNS
+* NetworkPolicy
+* ingress
+* Gateway API
+* HTTPRoute
+* service connectivity
+* pod-to-pod networking
+* node networking
+* CNI troubleshooting
+* iptables/nftables relevance
+* DNS troubleshooting
+* port mappings
+
+Determine what is relevant to the CURRENT CKA.
+
+## Storage
+
+* PersistentVolume
+* PersistentVolumeClaim
+* StorageClass
+* access modes
+* reclaim policy
+* volumeMode
+* dynamic provisioning
+* static provisioning
+* mounting PVCs
+* resizing
+* troubleshooting Pending PVCs
+
+## RBAC
+
+* ServiceAccounts
+* Roles
+* RoleBindings
+* ClusterRoles
+* ClusterRoleBindings
+* kubectl auth can-i
+* impersonation
+* permissions troubleshooting
+
+## Troubleshooting
+
+Spend substantial time here.
+
+Research actual recurring troubleshooting themes involving:
+
+* broken worker node
+* kubelet not running
+* wrong kubelet configuration
+* failed Pod
+* CrashLoopBackOff
+* ImagePullBackOff
+* pending Pod
+* scheduler issue
+* node NotReady
+* networking problem
+* Service not reaching Pods
+* wrong selectors
+* DNS failure
+* control plane problem
+* static Pod issue
+* certificate problem
+* etcd problem
+* resource constraints
+* incorrect configuration
+* logs
+* events
+* journalctl
+* systemctl
+
+Teach a **systematic troubleshooting decision tree**.
+
+---
+
+# PHASE 5 — CURRENT-SYLLABUS DIFFERENCES
+
+Very important:
+
+Determine whether newer versions of CKA now contain technologies/topics that older preparation courses may not emphasize.
+
+Examples might include:
+
+* Helm
+* Kustomize
+* Gateway API
+* CRDs
+* Operators
+* container runtimes
+* OCI
+* admission controllers
+* newer networking functionality
+
+Do not assume these examples are included.
+
+Research them.
+
+Create:
+
+# OLD CKA ADVICE THAT IS NOW OUTDATED
+
+and
+
+# NEWER CKA AREAS I MUST NOT MISS
+
+This will prevent me from spending time preparing for an older version of the exam.
+
+---
+
+# PHASE 6 — KNOWLEDGE REFRESH
+
+Because I already know Kubernetes, create a:
+
+# CKA RAPID KNOWLEDGE REFRESH
+
+It should refresh the essential concepts in approximately the shortest useful form.
+
+For every topic use:
+
+### Concept in 3–8 sentences
+
+### Important objects
+
+### Important YAML fields
+
+### Important commands
+
+### How to verify
+
+### Common exam mistake
+
+### One mini exercise
+
+Do not give me long theoretical explanations unless the theory directly helps solve exam tasks.
+
+---
+
+# PHASE 7 — COMMAND MUSCLE MEMORY
+
+Passing CKA depends heavily on speed.
+
+Create:
+
+# CKA COMMAND MUSCLE MEMORY SHEET
+
+Include high-value commands such as:
+
+kubectl get
+
+kubectl describe
+
+kubectl logs
+
+kubectl exec
+
+kubectl run
+
+kubectl create
+
+kubectl expose
+
+kubectl set
+
+kubectl scale
+
+kubectl rollout
+
+kubectl patch
+
+kubectl edit
+
+kubectl replace
+
+kubectl delete
+
+kubectl label
+
+kubectl annotate
+
+kubectl taint
+
+kubectl drain
+
+kubectl cordon
+
+kubectl uncordon
+
+kubectl top
+
+kubectl auth can-i
+
+kubectl config
+
+kubectl apply
+
+kubectl explain
+
+and relevant Linux/system administration commands.
+
+For each command show only exam-useful examples.
+
+Teach me to use commands like:
+
+```bash
+kubectl run ... --dry-run=client -o yaml
+```
+
+to generate YAML quickly whenever appropriate.
+
+---
+
+# YAML SPEED TRAINING
+
+Create drills where I must rapidly construct or modify:
+
+* Pods
+* Deployments
+* Services
+* ConfigMaps
+* Secrets
+* NetworkPolicies
+* PVs
+* PVCs
+* Roles
+* RoleBindings
+* ServiceAccounts
+* Jobs
+* CronJobs
+* DaemonSets
+
+Teach me when to:
+
+* generate YAML,
+* edit existing YAML,
+* use imperative commands,
+* use kubectl patch,
+* use kubectl set,
+* use kubectl edit.
+
+I want to minimize typing.
+
+---
+
+# PHASE 8 — LINUX SKILLS FOR CKA
+
+Identify every Linux/system administration command that can materially help during the CKA.
+
+Examples:
+
+```bash
+systemctl
+journalctl
+ps
+ss
+ip
+curl
+wget
+grep
+awk
+sed
+cat
+less
+tail
+head
+find
+ls
+cp
+mv
+mkdir
+chmod
+chown
+openssl
+crictl
+```
+
+For each one explain only how it may appear during a CKA task.
+
+---
+
+# PHASE 9 — DOCUMENTATION NAVIGATION
+
+Teach me how to use the Kubernetes documentation quickly during the exam.
+
+Create:
+
+# KUBERNETES DOCS NAVIGATION MAP
+
+For each important task tell me:
+
+**What I would search for**
+
+and
+
+**Which documentation area normally contains the example I need.**
+
+Examples:
+
+NetworkPolicy
+
+PV/PVC
+
+RBAC
+
+init containers
+
+DaemonSet
+
+taints/tolerations
+
+affinity
+
+kubeadm upgrade
+
+etcd backup
+
+Gateway API
+
+etc.
+
+Do not encourage memorizing large YAML manifests that are faster to retrieve from documentation.
+
+---
+
+# PHASE 10 — TIME MANAGEMENT
+
+Create a precise exam strategy.
+
+Assume I want to maximize points rather than prove that I can solve every problem.
+
+Teach me:
+
+* how quickly to scan the entire exam,
+* which questions to solve first,
+* when to skip,
+* how to prioritize high-value easy tasks,
+* how long to spend before abandoning a task temporarily,
+* how to mark unfinished questions,
+* how much time to reserve for review,
+* how to verify every answer.
+
+Create something like:
+
+**First Pass → High-confidence points**
+
+**Second Pass → Medium problems**
+
+**Third Pass → Troubleshooting / difficult questions**
+
+But modify the strategy based on current CKA realities.
+
+---
+
+# CONTEXT SAFETY
+
+A critical CKA mistake is working on the wrong Kubernetes cluster/context.
+
+Create a ritual that I should execute before EVERY question.
+
+For example:
+
+1. verify/switch context
+2. verify namespace
+3. inspect resources
+4. solve
+5. validate
+
+Research current exam recommendations and create the safest/fastest workflow.
+
+---
+
+# VALIDATION HABIT
+
+For every type of problem teach me how to verify the result.
+
+For example:
+
+```bash
+kubectl get
+kubectl describe
+kubectl logs
+kubectl auth can-i
+curl
+kubectl exec
+```
+
+Every practice task you create should contain:
+
+**Solve**
+
+and
+
+**Verify**
+
+sections.
+
+---
+
+# PHASE 11 — CREATE HANDS-ON LABS
+
+Build hands-on labs rather than passive reading.
+
+Each major CKA area should contain:
+
+### Level 1 — Refresh
+
+simple tasks
+
+### Level 2 — Exam Level
+
+realistic timed tasks
+
+### Level 3 — Troubleshooting
+
+something is deliberately broken
+
+### Level 4 — Hard Mode
+
+multiple problems combined
+
+For every exercise provide:
+
+* Task
+* Time limit
+* Skills tested
+* Hint
+* Solution
+* Faster solution
+* Verification commands
+* Common failure
+* Points/difficulty estimate
+
+Do NOT expose the solution immediately.
+
+Put solutions underneath a clear separator so I can attempt the problem first.
+
+---
+
+# PHASE 12 — CANDIDATE-REPORT-INSPIRED QUESTIONS
+
+Using community research, create a section called:
+
+# QUESTIONS INSPIRED BY RECENT CKA CANDIDATE EXPERIENCES
+
+Again:
+
+Do NOT reproduce confidential real questions.
+
+Instead say something like:
+
+> Multiple recent candidates reported tasks involving NetworkPolicy troubleshooting.
+
+Then create an **original CKA-style NetworkPolicy question**.
+
+For every candidate-reported pattern include:
+
+### Community signal
+
+How often it was mentioned.
+
+### Underlying skill
+
+What competency appears to matter.
+
+### Original exam-style problem
+
+### Difficulty
+
+### Expected completion time
+
+### Solution
+
+### Faster method
+
+### Verification
+
+### Common traps
+
+This is extremely important.
+
+---
+
+# PHASE 13 — HIGH-FREQUENCY QUESTION BANK
+
+Generate at least **100 original hands-on CKA exercises**.
+
+Prioritize them according to the frequency map.
+
+Do NOT make them 100 random Kubernetes questions.
+
+They should be deliberately distributed according to expected exam value.
+
+Categorize them into:
+
+* Cluster Architecture
+* Workloads
+* Scheduling
+* Services & Networking
+* Storage
+* RBAC
+* Cluster Maintenance
+* Troubleshooting
+* Other current syllabus topics
+
+Mark each:
+
+**P0 / P1 / P2 / P3**
+
+and
+
+**Easy / Medium / Hard**
+
+and include a recommended maximum completion time.
+
+---
+
+# PHASE 14 — MICRO DRILLS
+
+Create small drills that should take approximately:
+
+30 seconds
+
+1 minute
+
+2 minutes
+
+3 minutes
+
+5 minutes
+
+Examples:
+
+"Create a namespace."
+
+"Generate a Deployment YAML."
+
+"Change an image."
+
+"Add a taint."
+
+"Create a Service."
+
+"Find why a Pod is Pending."
+
+"Check whether serviceaccount X can delete Pods."
+
+The objective is to develop automatic command recall.
+
+Create at least **50 micro drills**.
+
+---
+
+# PHASE 15 — TROUBLESHOOTING DRILLS
+
+Create at least **30 broken-cluster/problem scenarios**.
+
+Examples:
+
+* wrong Service selector
+* incorrect targetPort
+* missing PVC
+* wrong StorageClass
+* broken NetworkPolicy
+* kubelet stopped
+* invalid static Pod manifest
+* bad image
+* readiness probe failing
+* node taint blocking Pod
+* wrong affinity
+* failed DNS
+* RBAC denying request
+* expired/misconfigured certificate where syllabus relevant
+* cluster component failing
+
+For every scenario, force me to investigate rather than immediately reveal the cause.
+
+---
+
+# PHASE 16 — MOCK EXAMS
+
+Create at least **3 complete mock CKA exams**.
+
+## Mock Exam 1
+
+Normal difficulty.
+
+## Mock Exam 2
+
+Real-exam difficulty.
+
+## Mock Exam 3
+
+Harder than the real exam.
+
+The mock exams should:
+
+* follow the current official domain weighting as closely as possible,
+* be entirely hands-on,
+* contain multiple clusters/contexts where appropriate,
+* include weighted questions,
+* include easy scoring opportunities,
+* include several troubleshooting tasks,
+* include time pressure,
+* require verification.
+
+Do not show solutions until the end.
+
+Include a scoring system so I can calculate whether I would likely pass.
+
+---
+
+# PHASE 17 — KILLER.SH / KILLERCODA / LAB RESOURCES
+
+Research current practical lab resources.
+
+Compare options such as:
+
+* Killer.sh
+* Killercoda
+* KodeKloud
+* GitHub labs
+* Kubernetes official tutorials
+* other current CKA lab platforms
+
+For each evaluate:
+
+* realism compared with CKA
+* difficulty
+* value
+* topics covered
+* whether free/paid
+* best way to use it
+
+I do NOT need twenty resources.
+
+Tell me the **smallest set of resources that produces the highest probability of passing.**
+
+---
+
+# PHASE 18 — STUDY PLAN
+
+After researching everything, create an accelerated preparation plan.
+
+Create versions for:
+
+### 7-day preparation
+
+### 14-day preparation
+
+### 21-day preparation
+
+Recommend which one is appropriate for someone who already works with Kubernetes.
+
+Each day must include:
+
+**Knowledge Refresh**
+
+**Command Drills**
+
+**Hands-on Labs**
+
+**Troubleshooting**
+
+**Mock Exam / timed practice**
+
+**Review**
+
+Avoid generic instructions like:
+
+> Study networking.
+
+Instead say:
+
+> Solve these 8 NetworkPolicy/Service/DNS exercises and complete them within X minutes.
+
+---
+
+# MY DAILY TRAINING METHOD
+
+I want you to eventually interact with me as my CKA instructor.
+
+During preparation, use this loop:
+
+### STEP 1 — Question
+
+Give me a hands-on task.
+
+### STEP 2 — No immediate solution
+
+Allow me to answer.
+
+### STEP 3 — Evaluate
+
+Check my commands/approach.
+
+### STEP 4 — Optimize
+
+Show me a faster CKA-style solution.
+
+### STEP 5 — Variation
+
+Give me a slightly different version.
+
+### STEP 6 — Time pressure
+
+Give me another version with a target time.
+
+Continue until the skill becomes automatic.
+
+---
+
+# ADAPTIVE DIFFICULTY
+
+Track my performance.
+
+Maintain a table:
+
+| Topic | Accuracy | Speed | Confidence | Weakness | Next Drill |
+| ----- | -------: | ----: | ---------: | -------- | ---------- |
+
+If I solve something correctly three times quickly, reduce training frequency for that skill.
+
+If I repeatedly fail something, increase drills and explain the concept again.
+
+The objective is to spend preparation time where my probability of losing exam points is highest.
+
+---
+
+# COMMAND SPEED TARGETS
+
+For common operations, suggest target completion times.
+
+For example, determine reasonable targets for:
+
+* create Pod
+* create Deployment
+* create Service
+* scale Deployment
+* rollout/rollback
+* ConfigMap
+* Secret
+* ServiceAccount
+* RBAC
+* NetworkPolicy
+* PVC
+* scheduling task
+* troubleshooting failed Pod
+* troubleshooting failed Service
+* kubeadm operation
+* etcd backup/restore
+
+Use research and realistic estimates rather than blindly accepting these examples.
+
+---
+
+# PHASE 19 — CREATE A CKA CHEAT SHEET
+
+Create a compact final-reference sheet containing:
+
+## kubectl commands
+
+## imperative generators
+
+## YAML snippets worth knowing
+
+## Linux commands
+
+## kubeadm commands
+
+## etcd commands
+
+## troubleshooting commands
+
+## networking checks
+
+## RBAC checks
+
+## storage checks
+
+## context switching
+
+## useful aliases
+
+## useful environment variables
+
+## documentation search keywords
+
+Keep it concise enough to review repeatedly.
+
+---
+
+# SHELL PRODUCTIVITY
+
+Research what shell customization is currently allowed and useful during the exam.
+
+If permitted and practical, evaluate things such as:
+
+```bash
+alias k=kubectl
+export do="--dry-run=client -o yaml"
+export now="--force --grace-period 0"
+```
+
+and:
+
+```bash
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+```
+
+Do NOT recommend anything prohibited by current exam rules.
+
+Create a recommended **first 60-second terminal setup** only after verifying current restrictions.
+
+---
+
+# PHASE 20 — EXAM TRAPS
+
+Create:
+
+# 30 CKA EXAM MISTAKES THAT CAN COST ME THE CERTIFICATION
+
+Examples to investigate:
+
+* wrong context
+* wrong namespace
+* modifying wrong resource
+* not verifying
+* forgetting labels/selectors
+* accidentally deleting resources
+* bad YAML indentation
+* wrong API version
+* missing Service targetPort
+* forgetting node uncordon
+* incorrect etcd restore destination
+* spending 20 minutes on one task
+* overlooking task wording
+
+Base the list on actual patterns discovered during research.
+
+---
+
+# PHASE 21 — FINAL 48 HOURS
+
+Give me an exact plan for:
+
+## 48 hours before CKA
+
+## 24 hours before CKA
+
+## morning/day of exam
+
+## 30 minutes before exam
+
+Tell me:
+
+* what to practice,
+* what NOT to learn anymore,
+* what commands to review,
+* what labs to run,
+* how much mock testing is useful,
+* what environment/proctoring checks to perform,
+* what mistakes to avoid.
+
+---
+
+# PHASE 22 — EXAM READINESS GATE
+
+Do not simply tell me that I am ready.
+
+Define measurable criteria.
+
+For example:
+
+I should not book/take the exam until I can:
+
+* complete X% of P0 tasks,
+* finish certain tasks under target times,
+* achieve X score on mock exams,
+* restore etcd reliably if relevant,
+* troubleshoot common node problems,
+* create NetworkPolicies quickly,
+* perform RBAC tasks,
+* perform storage tasks,
+* complete cluster maintenance tasks.
+
+Create a:
+
+# CKA GO / NO-GO CHECKLIST
+
+I want objective criteria indicating whether I am likely to pass.
+
+---
+
+# RESEARCH QUALITY REQUIREMENTS
+
+This part is extremely important.
+
+Do not produce the preparation guide until you have researched enough sources to cross-check the major claims.
+
+For significant exam claims, cite the source.
+
+Prioritize:
+
+1. Linux Foundation
+2. CNCF
+3. Kubernetes documentation
+4. recent credible candidate reports
+5. established Kubernetes training providers
+6. experienced engineer blogs/videos
+7. community discussions
+
+When community reports disagree, explicitly say so.
+
+Include publication dates wherever relevant.
+
+Older reports should receive less weight when the exam has subsequently changed.
+
+---
+
+# MULTI-AGENT RESEARCH APPROACH
+
+If agent/sub-agent functionality is available, use multiple specialized research agents.
+
+Suggested agents:
+
+### Agent 1 — Official Exam Analyst
+
+Research current Linux Foundation/CNCF exam rules and syllabus.
+
+### Agent 2 — Reddit Intelligence Agent
+
+Analyze recent CKA candidate reports.
+
+### Agent 3 — Blog/Medium Researcher
+
+Analyze detailed recent exam experience articles.
+
+### Agent 4 — GitHub Researcher
+
+Find high-quality CKA lab repositories and practice material.
+
+### Agent 5 — Curriculum Mapper
+
+Map candidate-reported task patterns to official domains.
+
+### Agent 6 — Kubernetes Expert
+
+Validate all technical answers and commands.
+
+### Agent 7 — Exam Question Designer
+
+Turn recurring competencies into original hands-on CKA questions.
+
+### Agent 8 — Troubleshooting Specialist
+
+Design broken-cluster exercises.
+
+### Agent 9 — Exam Strategy Analyst
+
+Optimize speed, scoring and question-order strategy.
+
+### Agent 10 — Quality Auditor
+
+Check the entire preparation program for obsolete Kubernetes commands, outdated curriculum assumptions, incorrect YAML, or weak questions.
+
+Agents should challenge each other's findings rather than simply agreeing.
+
+---
+
+# IMPORTANT: TECHNICAL VALIDATION
+
+Every command, YAML manifest, and solution must be technically validated.
+
+Avoid creating practice material containing commands that only "look correct."
+
+When possible:
+
+* validate API versions,
+* validate kubectl syntax,
+* validate YAML,
+* ensure namespace behavior is correct,
+* ensure selectors match,
+* ensure RBAC rules work,
+* ensure NetworkPolicies behave as described,
+* ensure storage examples are internally consistent.
+
+If a task depends on cluster configuration, explicitly state the assumptions.
+
+---
+
+# INFORMATION PRIORITY
+
+Apply approximately this priority to my preparation:
+
+**60–70% hands-on execution**
+
+**15–20% troubleshooting**
+
+**10–15% knowledge refresh**
+
+**5–10% exam strategy/documentation navigation**
+
+Adjust these ratios if current research shows a better distribution.
+
+The guiding principle is:
+
+> CKA is a practical exam. I should train primarily by operating Kubernetes rather than reading about Kubernetes.
+
+---
+
+# DO NOT DO THESE THINGS
+
+Do NOT:
+
+* give me a generic Kubernetes tutorial,
+* spend pages explaining containers,
+* spend excessive time on Kubernetes history,
+* overload me with low-value theory,
+* recommend dozens of courses,
+* blindly repeat an outdated curriculum,
+* copy certification dumps,
+* reproduce NDA-protected exam questions,
+* give solutions without validation,
+* create trivial multiple-choice quizzes as my primary preparation,
+* assume understanding equals execution speed.
+
+---
+
+# OUTPUT FORMAT
+
+Produce the research in the following order:
+
+## 1. Executive Summary
+
+What I need to do to pass.
+
+## 2. Current CKA Exam Snapshot
+
+Verified current exam information.
+
+## 3. What Changed Recently
+
+Important differences from older CKA preparation advice.
+
+## 4. Community Intelligence
+
+What recent candidates consistently report.
+
+## 5. CKA Priority Matrix
+
+P0/P1/P2/P3 skills.
+
+## 6. High-Frequency Task Patterns
+
+Recurring competencies.
+
+## 7. Rapid Kubernetes Refresh
+
+Only exam-relevant theory.
+
+## 8. Command Muscle Memory
+
+Commands I must be able to execute automatically.
+
+## 9. Documentation Navigation
+
+Where/how to find examples quickly.
+
+## 10. Topic-by-Topic Preparation
+
+Full exam-domain preparation.
+
+## 11. Troubleshooting Playbook
+
+Systematic debugging.
+
+## 12. Candidate-Experience-Inspired Exercises
+
+Original problems based on recurring patterns.
+
+## 13. 100+ Hands-On Practice Questions
+
+Prioritized and timed.
+
+## 14. 50+ Micro Drills
+
+Command-speed exercises.
+
+## 15. 30+ Troubleshooting Scenarios
+
+Broken resources/clusters.
+
+## 16. Three Full Mock Exams
+
+Increasing difficulty.
+
+## 17. Best Lab Resources
+
+Minimal high-value resource set.
+
+## 18. 7/14/21-Day Plans
+
+Detailed daily execution.
+
+## 19. CKA Cheat Sheet
+
+Compact revision reference.
+
+## 20. Exam Strategy
+
+Scoring/time/context/verification strategy.
+
+## 21. Final 48-Hour Strategy
+
+Last-stage preparation.
+
+## 22. GO / NO-GO Readiness Test
+
+Objective exam-readiness criteria.
+
+## 23. Sources
+
+Official and community sources with dates.
+
+---
+
+# FINAL OBJECTIVE
+
+The final material should not merely make me knowledgeable about Kubernetes.
+
+It should transform me into someone who can see a CKA task and immediately think:
+
+**"I know exactly where to look, what command to run, how to solve it, how to verify it, and whether I should spend another minute on it."**
+
+Optimize everything for:
+
+**PASSING THE CURRENT CKA EXAM ON MY FIRST ATTEMPT.**
+
+Accuracy > quantity.
+
+Hands-on ability > theoretical knowledge.
+
+Current information > outdated tutorials.
+
+Repeated task patterns > obscure Kubernetes features.
+
+Speed + verification > elegant solutions.
+
+Exam points > perfection.
+
+Begin by performing the research.
+
+Do not immediately generate all the training material from memory.
+
+First verify the **current CKA exam blueprint and rules**, then research recent candidate experiences, build the frequency/priority model, and only then construct the preparation program.
