@@ -1,0 +1,117 @@
+Model: gemini-3-pro-image-preview  |  Resolution: 4K 16:9
+Output dir: C:\Users\SIN3WZ\OneDrive - Bosch Group\Documents\Study\Kubernetes\AWS SAA\images
+Diagrams to process: 49
+
+  [SKIP - exists] aws-saa-00a-colony-domain-map.jpg
+  [SKIP - exists] aws-saa-00b-well-architected-wheel.jpg
+  [SKIP - exists] aws-saa-00c-cost-decision-tree.jpg
+  [SKIP - exists] aws-saa-00d-readiness-dashboard.jpg
+  [SKIP - exists] aws-saa-01-iam-badge-checkpoint.jpg
+  [SKIP - exists] aws-saa-02-sts-assumerole-trust.jpg
+  [SKIP - exists] aws-saa-03-kms-envelope-encryption.jpg
+  [SKIP - exists] aws-saa-04-sg-vs-nacl-gates.jpg
+  [SKIP - exists] aws-saa-05-waf-shield-perimeter.jpg
+  [SKIP - exists] aws-saa-06-secrets-vs-parameter-store.jpg
+  [SKIP - exists] aws-saa-07-ec2-instance-families-dock.jpg
+  [SKIP - exists] aws-saa-08-asg-elastic-bay.jpg
+  [SKIP - exists] aws-saa-09-spot-ondemand-reserved-tickets.jpg
+  [SKIP - exists] aws-saa-10-placement-groups.jpg
+  [SKIP - exists] aws-saa-11-lambda-coldstart-concurrency.jpg
+  [SKIP - exists] aws-saa-12-ecs-eks-fargate-modules.jpg
+  [SKIP - exists] aws-saa-13-vpc-anatomy.jpg
+  [SKIP - exists] aws-saa-14-public-private-subnet-nat.jpg
+  [SKIP - exists] aws-saa-15-peering-vs-transit-gateway.jpg
+  [SKIP - exists] aws-saa-16-direct-connect-vs-vpn.jpg
+  [SKIP - exists] aws-saa-17-alb-nlb-clb.jpg
+  [SKIP - exists] aws-saa-18-route53-routing-policies.jpg
+  Generating: aws-saa-19-cloudfront-edge-locations.jpg ...
+    [OK] aws-saa-19-cloudfront-edge-locations.jpg  (7893 KB, image/jpeg)
+  Generating: aws-saa-20-global-accelerator.jpg ...
+    [OK] aws-saa-20-global-accelerator.jpg  (7968 KB, image/jpeg)
+  [SKIP - exists] aws-saa-21-s3-storage-class-ladder.jpg
+  [SKIP - exists] aws-saa-22-s3-lifecycle-versioning.jpg
+  [SKIP - exists] aws-saa-23-ebs-efs-instance-store.jpg
+  [SKIP - exists] aws-saa-24-cross-region-replication.jpg
+  [SKIP - exists] aws-saa-25-snowball-datasync-storagegateway.jpg
+  [SKIP - exists] aws-saa-26-s3-access-patterns.jpg
+  [SKIP - exists] aws-saa-27-rds-multiaz-vs-read-replica.jpg
+  [SKIP - exists] aws-saa-28-aurora-architecture.jpg
+  [SKIP - exists] aws-saa-29-dynamodb-partition-keys.jpg
+  [SKIP - exists] aws-saa-30-dynamodb-gsi-lsi.jpg
+  [SKIP - exists] aws-saa-31-elasticache-redis-memcached.jpg
+  [SKIP - exists] aws-saa-32-redshift-analytics.jpg
+  [SKIP - exists] aws-saa-33-sqs-standard-vs-fifo.jpg
+  [SKIP - exists] aws-saa-34-sns-fanout.jpg
+  [SKIP - exists] aws-saa-35-eventbridge-rules.jpg
+  [SKIP - exists] aws-saa-36-step-functions-state-machine.jpg
+  [SKIP - exists] aws-saa-37-api-gateway-lambda.jpg
+  [SKIP - exists] aws-saa-38-multiaz-vs-multiregion.jpg
+  Generating: aws-saa-39-dr-strategy-ladder.jpg ...
+    [OK] aws-saa-39-dr-strategy-ladder.jpg  (7812 KB, image/jpeg)
+  Generating: aws-saa-40-asg-health-checks.jpg ...
+    [OK] aws-saa-40-asg-health-checks.jpg  (8853 KB, image/jpeg)
+  Generating: aws-saa-41-route53-health-check-failover.jpg ...
+    [OK] aws-saa-41-route53-health-check-failover.jpg  (7921 KB, image/jpeg)
+  Generating: aws-saa-42-backup-restore-automation.jpg ...
+    [OK] aws-saa-42-backup-restore-automation.jpg  (8414 KB, image/jpeg)
+  Generating: aws-saa-43-cloudwatch-metrics-alarms.jpg ...
+    [OK] aws-saa-43-cloudwatch-metrics-alarms.jpg  (8577 KB, image/jpeg)
+  Generating: aws-saa-44-cloudtrail-audit-log.jpg ...
+    [OK] aws-saa-44-cloudtrail-audit-log.jpg  (8847 KB, image/jpeg)
+  Generating: aws-saa-45-config-trusted-advisor.jpg ...
+    [OK] aws-saa-45-config-trusted-advisor.jpg  (9011 KB, image/jpeg)
+
+============================================================
+SUMMARY
+============================================================
+  [OK] 00a-colony-domain-map
+  [OK] 00b-well-architected-wheel
+  [OK] 00c-cost-decision-tree
+  [OK] 00d-readiness-dashboard
+  [OK] 01-iam-badge-checkpoint
+  [OK] 02-sts-assumerole-trust
+  [OK] 03-kms-envelope-encryption
+  [OK] 04-sg-vs-nacl-gates
+  [OK] 05-waf-shield-perimeter
+  [OK] 06-secrets-vs-parameter-store
+  [OK] 07-ec2-instance-families-dock
+  [OK] 08-asg-elastic-bay
+  [OK] 09-spot-ondemand-reserved-tickets
+  [OK] 10-placement-groups
+  [OK] 11-lambda-coldstart-concurrency
+  [OK] 12-ecs-eks-fargate-modules
+  [OK] 13-vpc-anatomy
+  [OK] 14-public-private-subnet-nat
+  [OK] 15-peering-vs-transit-gateway
+  [OK] 16-direct-connect-vs-vpn
+  [OK] 17-alb-nlb-clb
+  [OK] 18-route53-routing-policies
+  [OK] 19-cloudfront-edge-locations
+  [OK] 20-global-accelerator
+  [OK] 21-s3-storage-class-ladder
+  [OK] 22-s3-lifecycle-versioning
+  [OK] 23-ebs-efs-instance-store
+  [OK] 24-cross-region-replication
+  [OK] 25-snowball-datasync-storagegateway
+  [OK] 26-s3-access-patterns
+  [OK] 27-rds-multiaz-vs-read-replica
+  [OK] 28-aurora-architecture
+  [OK] 29-dynamodb-partition-keys
+  [OK] 30-dynamodb-gsi-lsi
+  [OK] 31-elasticache-redis-memcached
+  [OK] 32-redshift-analytics
+  [OK] 33-sqs-standard-vs-fifo
+  [OK] 34-sns-fanout
+  [OK] 35-eventbridge-rules
+  [OK] 36-step-functions-state-machine
+  [OK] 37-api-gateway-lambda
+  [OK] 38-multiaz-vs-multiregion
+  [OK] 39-dr-strategy-ladder
+  [OK] 40-asg-health-checks
+  [OK] 41-route53-health-check-failover
+  [OK] 42-backup-restore-automation
+  [OK] 43-cloudwatch-metrics-alarms
+  [OK] 44-cloudtrail-audit-log
+  [OK] 45-config-trusted-advisor
+
+49/49 succeeded.
