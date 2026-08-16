@@ -1,5 +1,14 @@
 # AWS SAA-C03 — 14-Day Spaced-Repetition Study Plan
 
+> **File-reference correction:** this plan was drafted referencing per-domain question files (e.g. `domain1-iam-access-management-questions.md`, `domain2-resilient-architectures-questions.md`) that do not exist as separate files. All 200 practice questions live in a single consolidated file, **`07-question-bank.md`**, organized by domain in this order:
+> - Domain 1 (Design Secure Architectures): Questions 1-60
+> - Domain 2 (Design Resilient Architectures): Questions 61-112
+> - Domain 3 (Design High-Performing Architectures): Questions 113-160
+> - Domain 4 (Design Cost-Optimized Architectures): Questions 161-200
+>
+> Wherever this plan names a per-domain question file, use the matching question-number range in `07-question-bank.md` instead. Rapid-fire questions are genuinely split by section within the single file `08-rapid-fire-questions.md` (Security & IAM 1-20, Networking 21-40, Storage & Database 41-60, Compute & Serverless 61-80, Messaging/Migration/Cost 81-100).
+
+
 **Candidate profile:** 11+ years cloud/platform/DevOps (AWS/GCP/Azure/K8s), CKAD-certified. Gaps are AWS-specific service boundaries, not architecture fundamentals.
 
 **Exam:** 130 min, 65 Q (50 scored / 15 unscored), scaled 100–1000, pass = 720.

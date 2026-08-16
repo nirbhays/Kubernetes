@@ -1,5 +1,14 @@
 # AWS SAA-C03 — Exam Time Management Strategy
 
+> **File-reference correction:** this plan was drafted referencing per-domain question files (e.g. `domain1-iam-access-management-questions.md`, `domain2-resilient-architectures-questions.md`) that do not exist as separate files. All 200 practice questions live in a single consolidated file, **`07-question-bank.md`**, organized by domain in this order:
+> - Domain 1 (Design Secure Architectures): Questions 1-60
+> - Domain 2 (Design Resilient Architectures): Questions 61-112
+> - Domain 3 (Design High-Performing Architectures): Questions 113-160
+> - Domain 4 (Design Cost-Optimized Architectures): Questions 161-200
+>
+> Wherever this plan names a per-domain question file, use the matching question-number range in `07-question-bank.md` instead. Rapid-fire questions are genuinely split by section within the single file `08-rapid-fire-questions.md` (Security & IAM 1-20, Networking 21-40, Storage & Database 41-60, Compute & Serverless 61-80, Messaging/Migration/Cost 81-100).
+
+
 > Confidence labeling (same convention as `01-exam-snapshot-and-priority-matrix.md`):
 > **Officially Verified** — 130 minutes, 65 questions (50 scored / 15 unscored pretest,
 > indistinguishable from each other), multiple-choice (1 correct of 4) and multiple-response

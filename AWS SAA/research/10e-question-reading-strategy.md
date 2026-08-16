@@ -1,5 +1,14 @@
 # AWS SAA-C03 Question Reading Strategy
 
+> **File-reference correction:** this plan was drafted referencing per-domain question files (e.g. `domain1-iam-access-management-questions.md`, `domain2-resilient-architectures-questions.md`) that do not exist as separate files. All 200 practice questions live in a single consolidated file, **`07-question-bank.md`**, organized by domain in this order:
+> - Domain 1 (Design Secure Architectures): Questions 1-60
+> - Domain 2 (Design Resilient Architectures): Questions 61-112
+> - Domain 3 (Design High-Performing Architectures): Questions 113-160
+> - Domain 4 (Design Cost-Optimized Architectures): Questions 161-200
+>
+> Wherever this plan names a per-domain question file, use the matching question-number range in `07-question-bank.md` instead. Rapid-fire questions are genuinely split by section within the single file `08-rapid-fire-questions.md` (Security & IAM 1-20, Networking 21-40, Storage & Database 41-60, Compute & Serverless 61-80, Messaging/Migration/Cost 81-100).
+
+
 *Original study material — a reading/test-taking technique guide, not real exam content. Built to sit on top of the exam snapshot (`01-exam-snapshot-and-priority-matrix.md`), the service comparison matrix (`02-service-comparison-matrix.md`), and especially the trigger-word dictionary (`03-trigger-word-dictionary.md`), which this document assumes you already have loaded mentally.*
 
 ---
