@@ -1,6 +1,7 @@
 # CKA Topic: Storage (Official Weight 10% — smallest domain)
 
 ![Storage — The Warehouse Requisition Office](../images/cka-14-storage-warehouse-requisition.jpg)
+![Storage — The Stuck Requisition](../images/cka-30-pvc-pending-troubleshooting.jpg)
 
 *Scope note (from `01-exam-snapshot-and-priorities.md`): Storage is rated **P2 / Occasional / Low difficulty & failure-risk** for you specifically — heavy overlap with things you already touch conceptually, the genuinely new CKA-specific piece is the **admin side** (StorageClass, provisioner wiring, reclaim policy, static provisioning) rather than the app-dev side (mounting a volume into a Pod, which you already have cold from CKAD). Depth below is deliberately calibrated to a 10%-weight domain: solid and exam-correct, not exhaustive. All YAML/commands verified against the v1.35-era stable storage API (`storage.k8s.io/v1`, core `v1` for PV/PVC) — nothing here relies on alpha/beta fields.*
 

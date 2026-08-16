@@ -3,6 +3,9 @@
 ![Workloads — The Cargo Family Tree](../images/cka-06-workload-family-tree.jpg)
 ![Rolling Updates & Rollback — The Conveyor Belt](../images/cka-07-rolling-update-conveyor.jpg)
 ![Probes — Health Checkpoints on the Line](../images/cka-08-probes-health-checkpoints.jpg)
+![Init Containers & Sidecars — The Prep Crew and the Ride-Along](../images/cka-22-init-containers-sidecars.jpg)
+![ConfigMaps & Secrets — The Supply Cabinet](../images/cka-23-configmaps-secrets-consumption.jpg)
+![Jobs & CronJobs — The Delivery Fleet Dispatch Board](../images/cka-25-jobs-completion-modes.jpg)
 
 **Domain:** Workloads & Scheduling — 15% of exam (this file covers the *Workloads* half; taints/tolerations, node affinity, priority classes, and HPA/autoscaling live in a separate Scheduling/Autoscaling file since the exam snapshot treats them as distinct P1 curriculum bullets under the same domain).
 

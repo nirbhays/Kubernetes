@@ -1,5 +1,7 @@
 # Final 48 Hours — CKA Exam Countdown Plan
 
+![The Final Countdown](../images/cka-38-final-48-hour-countdown.jpg)
+
 *Assumes you have already worked through `01-exam-snapshot-and-priorities.md`, the topic files in
 `02-topics/`, the question banks in `04-question-bank/`, and at least one full timed run of a mock
 exam in `05-mock-exams/`. This document is not a re-teaching pass — it is a triage and logistics

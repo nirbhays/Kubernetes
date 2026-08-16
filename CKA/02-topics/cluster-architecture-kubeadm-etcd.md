@@ -5,6 +5,9 @@
 ![etcd — Vault Deposits and Withdrawals](../images/cka-03-etcd-vault-backup-restore.jpg)
 ![Static Pods — The Foreman's Bulletin Board](../images/cka-04-static-pod-mechanism.jpg)
 ![Certificates — The Badge Issuing Office](../images/cka-05-certificate-trust-chain.jpg)
+![kubeconfig — The Travel Passport](../images/cka-19-kubeconfig-anatomy.jpg)
+![kubeadm Upgrade — One Floor at a Time](../images/cka-20-kubeadm-upgrade-node-maintenance.jpg)
+![Admission Control — The Gatekeepers Beyond the Front Door](../images/cka-21-admission-controllers-gatekeepers.jpg)
 
 *Domain weight: Cluster Architecture, Installation & Configuration — 25% (second-largest domain). Per `01-exam-snapshot-and-priorities.md`, kubeadm bootstrap, kubeadm upgrade, etcd backup/restore, static-pod/kubelet diagnosis, and certificate management are all **P0**. Target Kubernetes version: v1.35 (re-verify against the live LF page before booking — v1.36 is already GA and the LF FAQ may be lagging). Runtime assumed: containerd (dockershim is long gone, removed in v1.24). Exercises below are original, built to drill the underlying competency — not reproductions of any real exam question.*
 

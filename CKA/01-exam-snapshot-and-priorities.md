@@ -75,6 +75,8 @@ You don't need to re-learn Kubernetes — the CKAD baseline (Deployments, Servic
 
 # CKA Priority Matrix
 
+![The Priority Heat Map](./images/cka-36-priority-matrix-heatmap.jpg)
+
 Frequency reflects how consistently the research files' *verified* sources (official curriculum/domain weight + fully-read blog articles) point to a skill, not raw forum mention counts (which were largely unverifiable — see Community Intelligence above). Priority accounts for your CKAD baseline: skills you already have cold from CKAD are marked down in Time Cost/Priority even where exam weight is nontrivial.
 
 **Transparency note:** the "Official Weight" and "Candidate Frequency" columns trace to specific research-file claims (or, where noted, a direct re-fetch during this document's correction pass). The "Difficulty," "Time Cost," and "Failure Risk" columns are this document's own editorial synthesis — informed by the sourced columns but not themselves traceable to a specific research-file line.

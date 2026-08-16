@@ -67,6 +67,8 @@ Based on community reports, exam simulators, and curriculum analysis:
 
 ## 2. EXAM TIME MANAGEMENT STRATEGY
 
+![CKS exam time management](../images/cks-40-exam-time-management.jpg)
+
 ### Time Budget
 
 ```
@@ -726,6 +728,8 @@ cat /var/log/pods/kube-system_kube-apiserver-*/kube-apiserver/*.log
 ## 7. CKS DOCUMENTATION NAVIGATION MAP
 
 ### Official Kubernetes Docs (kubernetes.io/docs) -- Allowed During Exam
+
+![Documentation navigation map](../images/cks-41-documentation-navigation-map.jpg)
 
 | Task | Search These Keywords | Direct URL Path |
 |---|---|---|

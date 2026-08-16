@@ -3,6 +3,10 @@
 ![The Master Troubleshooting Decision Tree](../images/cka-16-troubleshooting-decision-tree.jpg)
 ![Pod Lifecycle — The Diagnostic Dashboard](../images/cka-17-pod-lifecycle-traffic-lights.jpg)
 ![Node NotReady — The Mechanic's Garage](../images/cka-18-node-notready-triage.jpg)
+![Anatomy of a CrashLoopBackOff](../images/cka-32-crashloopbackoff-deep-dive.jpg)
+![DNS Troubleshooting — The Post Office Inspection](../images/cka-33-dns-troubleshooting-flow.jpg)
+![etcd Health — Inspecting the Vault](../images/cka-34-etcd-health-troubleshooting.jpg)
+![The Tower Has Gone Dark — Control Plane Down Triage](../images/cka-35-control-plane-down-triage.jpg)
 
 *Aligned to `CKA/01-exam-snapshot-and-priorities.md`: Troubleshooting is the single largest domain and the exam's genuine center of gravity. Control-plane/node/kubelet/CNI/DNS diagnosis via logs, events, `crictl`, `journalctl` is rated the strongest cross-source-confirmed pattern in the whole research set (P0). Static pod & kubelet manipulation, and certificate management, are also P0. CrashLoopBackOff/ImagePullBackOff/Pending-pod triage overlaps your CKAD baseline — kept tight here, not re-taught from scratch. Target version: v1.35 (re-verify live before booking per the snapshot file — v1.36 is already GA and the moving-target warning applies).*
 

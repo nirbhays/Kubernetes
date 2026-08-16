@@ -8,6 +8,8 @@
 
 # SECTION 1: CKS SECURITY COMMAND TOOLBOX
 
+![Security tool decision tree](../images/cks-39-security-tool-decision-tree.jpg)
+
 > Master every tool the CKS exam environment provides. For each tool: what it does, when to reach for it, and 3-5 practical exam-style examples.
 
 ---
@@ -96,6 +98,8 @@ kubectl delete clusterrolebinding insecure-binding
 ---
 
 ## 1.2 crictl -- Container Runtime Interface CLI
+
+![crictl command cheatsheet](../images/cks-38-crictl-command-cheatsheet.jpg)
 
 crictl talks directly to the container runtime (containerd/CRI-O). Use it when you need to inspect containers at the node level, not through the Kubernetes API.
 

@@ -4,6 +4,8 @@
 ![DNS — The CoreDNS Post Office](../images/cka-11-dns-resolution-post-office.jpg)
 ![NetworkPolicy — The Security Gates](../images/cka-12-networkpolicy-security-gates.jpg)
 ![Ingress vs Gateway API — Two Generations of Bridges](../images/cka-13-gateway-api-vs-ingress-bridges.jpg)
+![kube-proxy — Behind the Highway Toll Booths](../images/cka-28-kube-proxy-service-internals.jpg)
+![CNI — The Road Construction Crew](../images/cka-29-cni-pod-cidr-troubleshooting.jpg)
 
 *Scope calibration from `01-exam-snapshot-and-priorities.md`: this domain is P1 across the board — Services/Ingress/Gateway API rated Priority P1 (Low difficulty, Services is CKAD overlap, Gateway API is the newer piece), NetworkPolicy rated P1 (Low-Medium difficulty, partial CKAD overlap), and the narrow "CNI bring-up / pod-CIDR fix" sub-skill rated P2 (Low-confidence, single-source signal — general CNI/node/DNS diagnosis via logs/crictl/journalctl is the P0 item but lives in the Troubleshooting domain file, not here). Gateway API is confirmed in-scope and its docs (`gateway-api.sigs.k8s.io`) are exam-allowed for CKA specifically. Target version: v1.35 (re-verify against v1.36 before booking per the snapshot file). Nothing here is beginner material — you already know what a container is; this is exact syntax, exact flags, and exact failure-mode recall under a clock.*
 

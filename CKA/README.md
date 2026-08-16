@@ -97,7 +97,7 @@ Three full, timed, 120-minute mock exams of increasing difficulty, each independ
 
 ## Visual Companion (`images/`)
 
-21 original, hand-sketched-style illustrated diagrams, generated at 4K resolution with `gemini-3-pro-image-preview` via `scripts/generate_cka_diagrams.py`. Theme: "Kubernetes Control Tower" — the cluster as a port city (Control Tower = control plane, Cargo Yard = Workloads & Scheduling, Highways & Bridges = Services & Networking, Warehouse District = Storage, Security Checkpoint = RBAC, Diagnostic War Room = Troubleshooting). Every diagram is captioned with the real Kubernetes object names/commands alongside the metaphor, and tagged by complexity layer (Foundational / Operational / Exam-Critical) so you can tell at a glance how deep it goes. Each image is already embedded inline in its matching topic file — this list is just the full index. All 21 were manually reviewed for technical accuracy after generation; no errors were found.
+42 original, hand-sketched-style illustrated diagrams, generated at 4K resolution with `gemini-3-pro-image-preview` via `scripts/generate_cka_diagrams.py`. Theme: "Kubernetes Control Tower" — the cluster as a port city (Control Tower = control plane, Cargo Yard = Workloads & Scheduling, Highways & Bridges = Services & Networking, Warehouse District = Storage, Security Checkpoint = RBAC, Diagnostic War Room = Troubleshooting). Every diagram is captioned with the real Kubernetes object names/commands alongside the metaphor, and tagged by complexity layer (Foundational / Operational / Exam-Critical) so you can tell at a glance how deep it goes. Each image is already embedded inline in its matching topic file — this list is just the full index. Round 1 (21 diagrams, whole-domain overviews) and round 2 (21 more diagrams, drilling into smaller granular sub-topics — kubeconfig, admission control, init containers/sidecars, QoS, HPA, preemption, kube-proxy internals, per-domain troubleshooting deep-dives, and meta/strategy visuals) were both manually reviewed image-by-image for technical accuracy; one round-2 image (`27-priority-preemption`) had a garbled-text rendering glitch and was regenerated. No other errors found across all 42.
 
 | # | Image | Embedded in |
 |---|---|---|
@@ -122,6 +122,27 @@ Three full, timed, 120-minute mock exams of increasing difficulty, each independ
 | 16 | [The Master Troubleshooting Decision Tree](./images/cka-16-troubleshooting-decision-tree.jpg) | `02-topics/troubleshooting-playbook.md` |
 | 17 | [Pod Lifecycle — The Diagnostic Dashboard](./images/cka-17-pod-lifecycle-traffic-lights.jpg) | `02-topics/troubleshooting-playbook.md` |
 | 18 | [Node NotReady — The Mechanic's Garage](./images/cka-18-node-notready-triage.jpg) | `02-topics/troubleshooting-playbook.md` |
+| 19 | [kubeconfig — The Travel Passport](./images/cka-19-kubeconfig-anatomy.jpg) | `02-topics/cluster-architecture-kubeadm-etcd.md` |
+| 20 | [kubeadm Upgrade — One Floor at a Time](./images/cka-20-kubeadm-upgrade-node-maintenance.jpg) | `02-topics/cluster-architecture-kubeadm-etcd.md` |
+| 21 | [Admission Control — The Gatekeepers Beyond the Front Door](./images/cka-21-admission-controllers-gatekeepers.jpg) | `02-topics/cluster-architecture-kubeadm-etcd.md` |
+| 22 | [Init Containers & Sidecars — The Prep Crew and the Ride-Along](./images/cka-22-init-containers-sidecars.jpg) | `02-topics/workloads.md` |
+| 23 | [ConfigMaps & Secrets — The Supply Cabinet](./images/cka-23-configmaps-secrets-consumption.jpg) | `02-topics/workloads.md` |
+| 24 | [Requests & Limits — The Cargo Weight Manifest](./images/cka-24-resource-requests-limits-qos.jpg) | `02-topics/scheduling.md` |
+| 25 | [Jobs & CronJobs — The Delivery Fleet Dispatch Board](./images/cka-25-jobs-completion-modes.jpg) | `02-topics/workloads.md` |
+| 26 | [HPA — The Elastic Cargo Yard](./images/cka-26-hpa-workload-autoscaling.jpg) | `02-topics/scheduling.md` |
+| 27 | [Priority & Preemption — The VIP Eviction](./images/cka-27-priority-preemption.jpg) | `02-topics/scheduling.md` |
+| 28 | [kube-proxy — Behind the Highway Toll Booths](./images/cka-28-kube-proxy-service-internals.jpg) | `02-topics/networking.md` |
+| 29 | [CNI — The Road Construction Crew](./images/cka-29-cni-pod-cidr-troubleshooting.jpg) | `02-topics/networking.md` |
+| 30 | [Storage — The Stuck Requisition](./images/cka-30-pvc-pending-troubleshooting.jpg) | `02-topics/storage.md` |
+| 31 | [RBAC Troubleshooting — The Undercover Inspector](./images/cka-31-rbac-troubleshooting-impersonation.jpg) | `02-topics/rbac.md` |
+| 32 | [Anatomy of a CrashLoopBackOff](./images/cka-32-crashloopbackoff-deep-dive.jpg) | `02-topics/troubleshooting-playbook.md` |
+| 33 | [DNS Troubleshooting — The Post Office Inspection](./images/cka-33-dns-troubleshooting-flow.jpg) | `02-topics/troubleshooting-playbook.md` |
+| 34 | [etcd Health — Inspecting the Vault](./images/cka-34-etcd-health-troubleshooting.jpg) | `02-topics/troubleshooting-playbook.md` |
+| 35 | [The Tower Has Gone Dark — Control Plane Down Triage](./images/cka-35-control-plane-down-triage.jpg) | `02-topics/troubleshooting-playbook.md` |
+| 36 | [The Priority Heat Map](./images/cka-36-priority-matrix-heatmap.jpg) | `01-exam-snapshot-and-priorities.md` |
+| 37 | [Three Roads to Exam Day](./images/cka-37-study-roadmap-7-14-21.jpg) | `06-strategy/study-plans-7-14-21-day.md` |
+| 38 | [The Final Countdown](./images/cka-38-final-48-hour-countdown.jpg) | `06-strategy/final-48-hours-plan.md` |
+| 39 | [The Launch Control Panel](./images/cka-39-go-no-go-dashboard.jpg) | `06-strategy/go-no-go-checklist.md` |
 
 To regenerate or add more: `python CKA/scripts/generate_cka_diagrams.py` (skips existing files) or `python CKA/scripts/generate_cka_diagrams.py <key>` to force-regenerate a specific one (keys are the `diagram("key", ...)` first arguments in the script).
 

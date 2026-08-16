@@ -1,6 +1,7 @@
 # RBAC — CKA Study Notes
 
 ![RBAC — The Security Checkpoint HQ](../images/cka-15-rbac-security-badges.jpg)
+![RBAC Troubleshooting — The Undercover Inspector](../images/cka-31-rbac-troubleshooting-impersonation.jpg)
 
 **Priority: P0** (Cluster Architecture, Installation & Configuration — 25% domain; also directly feeds Troubleshooting — 30% domain, since "why is my ServiceAccount/Pod getting Forbidden" is a classic diagnosis task). Target cluster version: v1.35 (re-verify against v1.36 close to booking per `01-exam-snapshot-and-priorities.md`). RBAC API is `rbac.authorization.k8s.io/v1` and has been stable for many releases — no version-skew concerns here.
 

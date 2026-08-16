@@ -1,5 +1,7 @@
 # CKA Accelerated Study Plans — 7-Day / 14-Day / 21-Day
 
+![Three Roads to Exam Day](../images/cka-37-study-roadmap-7-14-21.jpg)
+
 *Built directly from the material that already exists in this repo: `01-exam-snapshot-and-priorities.md` (priority matrix), `02-topics/*.md` (concept references), `03-cheatsheets/*.md`, `04-question-bank/*.md` (237 original questions/drills/scenarios across 8 files), and `05-mock-exams/*.md` (3 full 100-point, 120-minute mocks). No plan below tells you to "study networking" — every day points at specific files and specific question numbers that exist right now in this repo. All three plans assume the P0 skew documented in the priority matrix: Troubleshooting (30%) and Cluster Architecture/kubeadm/etcd/certs (25%) get the majority of reps; Storage (10%) and the CKAD-overlap parts of Workloads (Deployments, Jobs, DaemonSets) get the least.*
 
 **Non-negotiable, per `01-exam-snapshot-and-priorities.md`:** run all hands-on labs and troubleshooting drills on real multi-node kubeadm VMs, not kind/minikube — several drills (static pod manifests, `crictl`, `journalctl -u kubelet`, `/var/lib/kubelet/kubeadm-flags.env`, cgroup driver mismatches) depend on systemd/CRI-level access that kind/minikube abstract away. Set exam-realistic aliases every session: `alias k=kubectl` and `export do="--dry-run=client -o yaml"`.

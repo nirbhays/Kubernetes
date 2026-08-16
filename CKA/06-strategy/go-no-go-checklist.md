@@ -1,5 +1,7 @@
 # CKA Go / No-Go Readiness Checklist
 
+![The Launch Control Panel](../images/cka-39-go-no-go-dashboard.jpg)
+
 *Objective, checkable gate for booking the exam. Every threshold below ties to a specific file/question
 number that exists in this repo (`01-exam-snapshot-and-priorities.md`, `04-question-bank/*.md`,
 `05-mock-exams/*.md`) — nothing here is a vibe check. "Do not book the exam until you can honestly

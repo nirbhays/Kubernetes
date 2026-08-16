@@ -1103,6 +1103,8 @@ providers:
 
 ### 3.4 Provider Ordering -- CRITICAL CONCEPT
 
+![Encryption provider ordering](../images/cks-37-encryption-provider-ordering.jpg)
+
 ```yaml
 resources:
   - resources:

@@ -1,6 +1,9 @@
 # Scheduling (Workloads & Scheduling — 15%, Priority P1)
 
 ![Scheduling — The Matchmaker & the Bouncers](../images/cka-09-scheduling-matchmaking.jpg)
+![Requests & Limits — The Cargo Weight Manifest](../images/cka-24-resource-requests-limits-qos.jpg)
+![HPA — The Elastic Cargo Yard](../images/cka-26-hpa-workload-autoscaling.jpg)
+![Priority & Preemption — The VIP Eviction](../images/cka-27-priority-preemption.jpg)
 
 *Scope note: this domain sits under the official curriculum bullet "Configure Pod admission and
 scheduling (limits, node affinity, etc.)" — Workloads & Scheduling 15%, confirmed Medium
